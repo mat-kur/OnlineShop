@@ -1,0 +1,98 @@
+.shop-cart-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: -35px;
+    height: 100vh;
+}
+
+.shop-cart {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    background-color: #fff;
+    margin-top: 20px;
+    padding: 20px;
+    border-radius: 10px;
+    width: 100%;
+    max-width: 500px;
+}
+
+.shop-cart:first-of-type {
+    margin-top: 0;
+}
+
+.shop-icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-width: 70px;
+    min-height: 70px;
+    border-radius: 50%;
+    border: 1px solid #e5e7eb;
+    padding: 5px;
+    flex: 0 0 auto;
+}
+
+.shop-icon .truck-icon, .shop-icon .money-icon, .shop-icon .shield-icon, .shop-icon .headset-icon {
+    font-size: 29px;
+    color: rgba(0, 173, 219, 1);
+}
+
+.shop-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    flex: 0 0 auto;
+}
+
+.shop-info-title, .shop-info-content {
+    margin-left: 10px;
+    padding: 0;
+    align-self: flex-start;
+}
+
+.shop-info-title {
+    font-weight: 700;
+}
+
+.shop-info-content {
+    font-size: 12px;
+    font-weight: 300;
+    color: rgb(156, 163, 175);
+}
+
+.banner {
+    position: relative;
+    height: auto;
+    margin-top: 15px;
+}
+
+.image-container {
+    position: relative;
+}
+
+.banner-img {
+    max-height: 200px;
+    max-width: 400px;
+    border-radius: 10px;
+}
+
+.image-container::after {
+    border-radius: 10px;
+    max-height: 200px;
+    min-width: 335px;
+    margin: 0px 15px;
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: black;
+    opacity: 0.3;
+    z-index: 1;
+}
+
+

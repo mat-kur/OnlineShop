@@ -1,0 +1,42 @@
+
+header.main-header {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding-top: 15px;
+}
+
+.header-bars, .header-bucket {
+    font-size: 26px;
+}
+
+.header-bars {
+    margin-left: 15px;
+}
+
+.header-title {
+    font-family: 'IBM Plex Mono', monospace;
+    font-weight: 300;
+}
+
+.header-title span {
+    color: rgb(0, 173, 219, 1);
+}
+
+.icon-badge-container {
+    position: relative;
+    display: inline-block; /* lub "inline-flex" */
+    margin-right: 15px;
+}
+
+.icon-badge {
+
+    background-color: #369;
+    color: white;
+    padding: 2px 6px;
+    font-size: 12px;
+    border-radius: 50%;
+    position: absolute;
+    top: -8px;
+    right: -8px;
+}
