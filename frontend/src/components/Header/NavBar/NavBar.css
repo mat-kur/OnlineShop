@@ -114,4 +114,10 @@ a.sub-nav-item {
     margin-left: auto;
 }
 
+@media (min-width: 576px) {
+    .main-navbar {
+        min-width: 60vw;
+    }
+}
+
 

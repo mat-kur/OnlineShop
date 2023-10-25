@@ -17,6 +17,7 @@
     border-radius: 10px;
     width: 100%;
     max-width: 500px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 .shop-cart:first-of-type {
@@ -71,19 +72,17 @@
 
 .image-container {
     position: relative;
+    display: inline-block; /* Zmieniamy na inline-block, aby kontener dopasowywał się do obrazka */
 }
 
 .banner-img {
     max-height: 200px;
     max-width: 400px;
     border-radius: 10px;
+    display: block; /* Dodajemy, aby usunąć domyślny margines dolny obrazka */
 }
 
 .image-container::after {
-    border-radius: 10px;
-    max-height: 200px;
-    min-width: 335px;
-    margin: 0px 15px;
     content: '';
     position: absolute;
     top: 0;
@@ -93,6 +92,24 @@
     background-color: black;
     opacity: 0.3;
     z-index: 1;
+    border-radius: 10px;
 }
 
+@media (min-width: 576px) {
+    .banner {
+        position: relative;
+        height: auto;
+        margin-top: 15px;
+    }
 
+    .banner-img {
+        max-height: 200px;
+        min-width: 425px;
+        max-width: 425px;
+        border-radius: 10px;
+    }
+
+    .shop-cart-container {
+        margin-top: -60px;
+    }
+}

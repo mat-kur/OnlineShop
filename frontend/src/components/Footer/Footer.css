@@ -1,0 +1,31 @@
+div.wrapper-footer {
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+    background-color: #333;
+    border-top: 1px solid rgba(119,119,119,.17);
+    padding: 10px 30px;
+}
+
+.footer-title, p.email, p.phone {
+    align-self: flex-start;
+    justify-self: flex-start;
+    color: #ffffff;
+}
+
+.wrapper-email, .wrapper-phone {
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.footer-icon {
+    font-size: 18px;
+    margin-right: 10px;
+    color: rgba(0, 173, 219, 1);
+}
+
+p.email, p.phone {
+    font-weight: 300;
+    font-size: 13px;
+}
