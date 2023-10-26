@@ -1,329 +1,320 @@
-/*.shop-main-items, .shop-main-items-static {*/
-/*    background-color: #fff;*/
-/*    display: flex;*/
-/*    position: relative;*/
-/*    flex-direction: column;*/
-/*    padding: 10px 30px;*/
-/*    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);*/
-/*    overflow: hidden;*/
-/*    border-radius: 10px;*/
-/*}*/
-
-/*.item-wrapper {*/
-/*    position: relative;*/
-/*}*/
-
-/*.heart-btn {*/
-/*    position: absolute;*/
-/*    top: 5px;*/
-/*    right: 5px;*/
-/*    border-radius: 4px;*/
-/*    background-color: rgba(0,0,0,.3);*/
-/*    cursor: pointer;*/
-/*}*/
-
-/*.like-btn {*/
-/*    padding: 4px 8px;*/
-/*    color: #ffffff;*/
-/*}*/
-
-/*.offers-title {*/
-/*    display: block;*/
-/*    margin: auto;*/
-/*    width: 100%;*/
-/*    padding: 5px;*/
-/*    margin-bottom: 20px;*/
-/*    border-bottom: 1px solid rgba(119,119,119,.17);*/
-/*}*/
-
-/*.arrow-slide-left {*/
-/*    position: absolute;*/
-/*    left: 10px;*/
-/*    top: 50%;*/
-/*    transform: translateY(-50%);*/
-/*    z-index: 999;*/
-/*    font-size: 20px;*/
-/*}*/
-
-/*.arrow-slide-right {*/
-/*    position: absolute;*/
-/*    right: 10px;*/
-/*    top: 50%;*/
-/*    transform: translateY(-50%);*/
-/*    font-size: 20px;*/
-/*}*/
-
-/*.test-ddw {*/
-/*    overflow: hidden;*/
-/*}*/
-
-/*.home-shop-item img {*/
-/*    margin-top: 30px;*/
-/*    max-height: 180px;*/
-/*    min-height: 180px;*/
-/*    min-width: 150px;*/
-/*    max-width: 150px;*/
-/*}*/
-
-/*.item-rate {*/
-/*    display: flex;*/
-/*    margin-top: 20px;*/
-/*}*/
-
-/*.stock {*/
-/*    padding: 5px;*/
-/*    margin-left: auto;*/
-/*    background-color: rgb(134 239 172);*/
-/*    border: none;*/
-/*    color: #ffffff;*/
-/*    border-radius: 6px;*/
-/*}*/
-
-/*.fill-star {*/
-/*    color: rgba(252,204,0,.7);*/
-/*}*/
-
-/*.item-info-container {*/
-/*    display: flex;*/
-/*    flex-direction: column;*/
-/*    justify-content: flex-start;*/
-/*    align-items: flex-start;*/
-/*    width: 100%;*/
-/*}*/
-
-/*.home-item-title p.title {*/
-/*    font-weight: 700;*/
-/*    font-size: 17px;*/
-/*    padding: 5px 0;*/
-/*}*/
-
-/*.home-item-content {*/
-/*    display: flex;*/
-/*    align-items: flex-start;*/
-/*}*/
-
-/*.home-item-content p.description {*/
-/*    display: block;*/
-/*    align-self: flex-start;*/
-/*    font-size: 14px;*/
-/*    color: rgb(156 163 175);*/
-/*    padding: 10px 0px;*/
-/*    word-wrap: break-word;*/
-/*    width: 100%;*/
-/*    min-height: 50px;*/
-/*}*/
-
-/*.home-item-info {*/
-/*    display: flex;*/
-/*    flex-direction: column;*/
-/*    justify-content: flex-start;*/
-/*    align-items: flex-start;*/
-/*    width: 100%;*/
-/*}*/
-
-/*.home-item-info p.item-info-p {*/
-/*    font-size: 14px;*/
-/*    font-weight: 700;*/
-/*    margin: 5px 0;*/
-/*}*/
-
-/*.home-item-info p span {*/
-/*    font-size: 14px;*/
-/*    font-weight: 500;*/
-/*    margin-left: 5px;*/
-/*}*/
-
-/*.home-item-price {*/
-/*    display: flex;*/
-/*    width: 100%;*/
-/*}*/
-
-/*.home-item-price p.price-before {*/
-/*    font-size: 12px;*/
-/*    margin-left: 10px;*/
-/*    color: rgba(0, 173, 219, 1);*/
-/*    text-decoration: line-through;*/
-/*}*/
-
-/*.item-info-container {*/
-/*    display: flex;*/
-/*    flex-direction: column;*/
-/*    align-items: flex-start;*/
-/*}*/
-
-/*.item-info-container p {*/
-/*    margin: 0;*/
-/*    padding: 0;*/
-/*}*/
-
-/*.button-detail {*/
-/*    display: flex;*/
-/*    width: 100%;*/
-/*}*/
-
-/*.button-detail button {*/
-/*    width: 100%;*/
-/*    padding: 10px 0;*/
-/*    margin-top: 10px;*/
-/*    border-radius: 10px;*/
-/*    border: none;*/
-/*    background-color: rgba(0, 173, 219, 1);*/
-/*    color: #ffffff;*/
-/*    font-size: 16px;*/
-/*}*/
-
-/*@keyframes slideInFromRight {*/
-/*    0% {*/
-/*        transform: translateX(100%);*/
-/*        opacity: 0;*/
-/*    }*/
-/*    100% {*/
-/*        transform: translateX(0);*/
-/*        opacity: 1;*/
-/*    }*/
-/*}*/
-
-/*@keyframes slideOutToLeft {*/
-/*    0% {*/
-/*        transform: translateX(0);*/
-/*        opacity: 1;*/
-/*    }*/
-/*    100% {*/
-/*        transform: translateX(-100%);*/
-/*        opacity: 0;*/
-/*    }*/
-/*}*/
-
-/*@keyframes slideInFromLeft {*/
-/*    0% {*/
-/*        transform: translateX(-100%);*/
-/*        opacity: 0;*/
-/*    }*/
-/*    100% {*/
-/*        transform: translateX(0);*/
-/*        opacity: 1;*/
-/*    }*/
-/*}*/
-
-/*@keyframes slideOutToRight {*/
-/*    0% {*/
-/*        transform: translateX(0);*/
-/*        opacity: 1;*/
-/*    }*/
-/*    100% {*/
-/*        transform: translateX(100%);*/
-/*        opacity: 0;*/
-/*    }*/
-/*}*/
-
-/*.shop-main-items-container .shop-main-items-static {*/
-/*    display: block;*/
-/*}*/
-
-/*.shop-main-items.slide-left {*/
-/*    animation: slideOutToLeft 0.5s forwards;*/
-/*}*/
-
-/*.shop-main-items.slide-right {*/
-/*    animation: slideOutToRight 0.5s forwards;*/
-/*}*/
-
-/*@media (min-width: 576px) {*/
-/*    .shop-main-items-container .shop-main-items-static {*/
-/*        display: block;*/
-/*    }*/
-
-/*    .shop-main-items-container {*/
-/*        display: flex;*/
-/*        align-items: center;*/
-/*        overflow: hidden;*/
-/*    }*/
-
-/*    .shop-main-items, .shop-main-items-static {*/
-/*        flex: 1;*/
-/*        margin-bottom: 5px;*/
-/*        margin-right: 5px;*/
-/*    }*/
-
-/*    .shop-main-items:first-of-type {*/
-/*        margin-left: 10px;*/
-/*    }*/
-
-/*    .shop-main-items-static.slide-left-static {*/
-/*        animation: slideInFromLeft 0.5s forwards;*/
-/*    }*/
-
-/*    .shop-main-items-static.slide-right-static {*/
-/*        animation: slideInFromRight 0.5s forwards;*/
-/*    }*/
-
-/*    .arrow-slide-right {*/
-/*        position: absolute;*/
-/*        right: 15px;*/
-/*        top: 50%;*/
-/*        transform: translateY(-50%);*/
-/*        font-size: 20px;*/
-/*    }*/
-/*}*/
-
-
-/* Twoje wcześniejsze style, które nie są bezpośrednio związane z karuzelą */
-
-/* ... */
-
-/* Styl dla karuzeli Bootstrap */
-
-.carousel {
-    /* Możesz dodać ogólne style dla całej karuzeli tutaj */
-}
-
-.carousel-item {
-    /* Style dla każdego elementu karuzeli */
+.shop-main-items, .shop-main-items-static {
     background-color: #fff;
     display: flex;
     position: relative;
     flex-direction: column;
     padding: 10px 30px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
     border-radius: 10px;
 }
 
-.carousel-caption {
-    /* Style dla podpisów w karuzeli */
+.item-wrapper {
+    position: relative;
+}
+
+.heart-btn {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    border-radius: 4px;
+    background-color: rgba(0,0,0,.3);
+    cursor: pointer;
+}
+
+.like-btn {
+    padding: 4px 8px;
+    color: #ffffff;
+}
+
+.offers-title {
+    display: block;
+    margin: auto;
+    width: 100%;
+    padding: 5px;
+    margin-bottom: 20px;
+    border-bottom: 1px solid rgba(119,119,119,.17);
+}
+
+.test-ddw {
+    overflow: hidden;
+}
+
+.home-shop-item img {
+    margin-top: 30px;
+    max-height: 180px;
+    min-height: 180px;
+    min-width: 150px;
+    max-width: 150px;
+}
+
+.item-rate {
+    display: flex;
+    margin-top: 20px;
+}
+
+.stock {
+    padding: 5px;
+    margin-left: auto;
+    background-color: rgb(134 239 172);
+    border: none;
+    color: #ffffff;
+    border-radius: 6px;
+}
+
+.fill-star {
+    color: rgba(252,204,0,.7);
+}
+
+.item-info-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    width: 100%;
+}
+
+.home-item-title p.title {
+    font-weight: 700;
+    font-size: 17px;
+    padding: 5px 0;
+}
+
+.home-item-content {
+    display: flex;
+    align-items: flex-start;
+}
+
+.home-item-content p.description {
+    display: block;
+    align-self: flex-start;
+    font-size: 14px;
+    color: rgb(156 163 175);
+    padding: 10px 0px;
+    word-wrap: break-word;
+    width: 100%;
+    min-height: 50px;
+}
+
+.home-item-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    width: 100%;
+}
+
+.home-item-info p.item-info-p {
+    font-size: 14px;
+    font-weight: 700;
+    margin: 5px 0;
+}
+
+.home-item-info p span {
+    font-size: 14px;
+    font-weight: 500;
+    margin-left: 5px;
+}
+
+.home-item-price {
+    display: flex;
+    width: 100%;
+}
+
+.home-item-price p.price-before {
+    font-size: 12px;
+    margin-left: 10px;
+    color: rgba(0, 173, 219, 1);
+    text-decoration: line-through;
+}
+
+.item-info-container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.item-info-container p {
+    margin: 0;
+    padding: 0;
+}
+
+.button-detail {
+    display: flex;
+    width: 100%;
+}
+
+.button-detail button {
+    width: 100%;
+    padding: 10px 0;
+    margin-top: 10px;
+    border-radius: 10px;
+    border: none;
+    background-color: rgba(0, 173, 219, 1);
+    color: #ffffff;
+    font-size: 16px;
+}
+
+.carousel {
+    background-color: #fff;
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+}
+
+.carousel-item {
+    background-color: #fff;
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    padding: 10px 30px;
+
+    border-radius: 10px;
 }
 
 .carousel-control-prev, .carousel-control-next {
-    /* Style dla przycisków nawigacyjnych karuzeli */
     font-size: 20px;
+    color: #222222;
     z-index: 999;
 }
 
 .carousel-control-prev-icon, .carousel-control-next-icon {
-    /* Style dla ikon przycisków nawigacyjnych */
-}
-
-.carousel-indicators {
-    /* Style dla wskaźników karuzeli (kropki na dole) */
-}
-
-.carousel-indicators li {
-    /* Style dla każdego wskaźnika */
-}
-
-.carousel-indicators .active {
-    /* Style dla aktywnego wskaźnika */
-}
-
-/* Jeśli chcesz dostosować responsywność karuzeli, możesz użyć mediów */
-
-@media (min-width: 576px) {
-    .carousel-item {
-        /* Style dla elementów karuzeli na większych ekranach */
-    }
-    /* ... */
+    color: #222222;
 }
 
 
 .carousel-indicators {
     display: none;
 }
+
+a.carousel-control-prev button, a.carousel-control-next button {
+    color: #000000;
+    background-color: #000000;
+}
+
+.carousel-indicators button {
+    display: none;
+}
+
+
+
+.carousel-indicators {
+    display: none;
+}
+
+.carousel-control-next-icon {
+    filter: invert(1);
+    margin-left: 20px;
+}
+
+.carousel-control-prev-icon {
+    filter: invert(1);
+    margin-right: 20px;
+}
+
+@media (min-width: 576px) {
+    .carousel-item {
+        /* Style dla elementów karuzeli na większych ekranach */
+    }
+
+    .carousel-control-next-icon {
+        filter: invert(1);
+        margin-left: 70%;
+    }
+
+    .carousel-control-prev-icon {
+        filter: invert(1);
+        margin-right: 70%;
+    }
+
+    .heart-btn {
+        font-size: 18px;
+    }
+
+    .home-shop-item img {
+        margin-top: 30px;
+        max-height: 250px;
+        min-height: 250px;
+        min-width: 200px;
+        max-width: 200px;
+    }
+
+    .item-rate {
+        font-size: 16px;
+    }
+
+    .home-item-content p.description {
+        font-size: 14px;
+    }
+
+
+    .home-item-info p.item-info-p {
+        font-size: 16px;
+        font-weight: 700;
+    }
+
+    .home-item-info p span {
+        font-size: 16px;
+        font-weight: 500;
+    }
+
+    .home-item-price {
+        font-size: 26px;
+        font-weight: 700;
+    }
+
+    .home-item-price p.price-before {
+        font-size: 16px;
+    }
+
+    .home-item-price {
+        margin-top: 30px;
+    }
+
+}
+
+
+@media (min-width: 768px) {
+    .item-container {
+        display: flex;
+        /*justify-content: space-between; !* Opcjonalnie, jeśli chcesz, aby elementy były rozłożone równomiernie w kontenerze *!*/
+    }
+
+    .item-img {
+        width: 100%;
+    }
+
+    .about-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        background-color: #fff;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        margin-right: 5px;
+        border-radius: 10px;
+    }
+
+    .about-list {
+        display: flex;
+        flex-direction: column;
+        justify-self: flex-start;
+        align-self: center;
+        list-style-type: none;
+    }
+
+    .about-item {
+        margin: 0;
+        padding: 3px 0;
+    }
+
+    .about-container, .shop-items-container {
+        flex: 0 0 50%;
+    }
+
+    .about {
+        margin-top: 30px;
+    }
+}
+
