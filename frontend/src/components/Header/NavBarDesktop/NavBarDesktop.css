@@ -1,0 +1,78 @@
+/*.desktop-list {*/
+/*    display: flex;*/
+/*}*/
+
+/*.desktop-item {*/
+/*    text-decoration: none;*/
+/*    color: #333333;*/
+/*    font-weight: 700;*/
+/*    font-size: 14px;*/
+/*    padding: 10px;*/
+/*    margin-right: 10px;*/
+/*}*/
+
+.desktop-arrow {
+    margin-right: 5px;
+    color: #336699;
+}
+
+.desktop-nav {
+    display: none;
+}
+
+.desktop-list {
+    display: flex;
+    /*flex-direction: column; !* Zmieniamy na kolumnę, aby sub-menu pojawiało się poniżej "My account" *!*/
+}
+
+.desktop-item {
+    text-decoration: none;
+    color: #333333;
+    font-weight: 300;
+    font-size: 14px;
+    padding: 10px;
+    margin-right: 10px;
+    position: relative;
+    list-style: none;
+}
+
+.desktop-submenu {
+    display: flex;
+    overflow: hidden;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    max-height: 0;
+    transition: max-height 0.3s ease-in-out; /* Animacja */
+}
+
+.desktop-submenu-open {
+    max-height: 400px; /* Wysokość dostosowana do potencjalnej maksymalnej wysokości sub-menu */
+    transition: max-height 0.3s ease-in-out; /* Animacja */
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
+.li-submenu-item {
+    list-style: none;
+}
+
+.desktop-submenu-item {
+    text-decoration: none;
+    color: #555;
+    display: block;
+    padding: 5px 10px;
+}
+
+.desktop-submenu-item:hover {
+    background-color: #f5f5f5;
+}
+
+@media (min-width: 576px) {
+    .desktop-nav {
+        display: block;
+    }
+}
+

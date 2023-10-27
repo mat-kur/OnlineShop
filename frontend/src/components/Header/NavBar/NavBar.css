@@ -147,4 +147,55 @@ a.sub-nav-item {
 
 }
 
+@media (min-width: 576px) {
+    .search-input {
+        margin-top: 0;
+    }
 
+    .search-icon {
+        position: absolute;
+        right: 30px;
+        font-size: 16px;
+        top: 65%;
+        transform: translateY(-50%);
+        pointer-events: none;
+        color: #eee;
+    }
+}
+
+@media (min-width: 768px) {
+    .search-input {
+        margin-top: 0;
+        background-color: #fff;
+        border: 2px solid #26c;
+    }
+
+    .search-icon {
+        position: absolute;
+        right: 40px;
+        font-size: 16px;
+        top: 50%;
+        transform: translateY(-50%);
+        pointer-events: none;
+        color: #333333;
+    }
+
+}
+
+/*@keyframes typing {*/
+/*    from { width: 0 }*/
+/*    to { width: 100% }*/
+/*}*/
+
+/*@keyframes deleting {*/
+/*    from { width: 100% }*/
+/*    to { width: 0 }*/
+/*}*/
+
+/*#searchInput::placeholder {*/
+/*    overflow: hidden;*/
+/*    white-space: nowrap;*/
+/*    width: 0;*/
+/*    animation: typing 4s steps(40, end), !* 2s to czas trwania animacji, możesz dostosować *!*/
+/*    deleting 2s steps(40, end) 4s; !* 4s to opóźnienie przed rozpoczęciem usuwania *!*/
+/*}*/

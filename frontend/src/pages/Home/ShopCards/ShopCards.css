@@ -36,7 +36,7 @@
     flex: 0 0 auto;
 }
 
-.shop-icon .truck-icon, .shop-icon .money-icon, .shop-icon .shield-icon, .shop-icon .headset-icon {
+.shop-icon .truck-icon, .shop-icon .money-icon, .shop-icon .shield-icon, .shop-icon .headset-icon, .shop-icon .dollar-icon {
     font-size: 29px;
     color: rgba(0, 173, 219, 1);
 }
@@ -75,9 +75,16 @@
     display: inline-block; /* Zmieniamy na inline-block, aby kontener dopasowywał się do obrazka */
 }
 
+/*.banner-img {*/
+/*    max-height: 200px;*/
+/*    max-width: 400px;*/
+/*    border-radius: 10px;*/
+/*    display: block; !* Dodajemy, aby usunąć domyślny margines dolny obrazka *!*/
+/*}*/
+
 .banner-img {
     max-height: 200px;
-    max-width: 400px;
+    width: 100%; /* Obrazy dostosowują się do dostępnej szerokości */
     border-radius: 10px;
     display: block; /* Dodajemy, aby usunąć domyślny margines dolny obrazka */
 }
@@ -137,6 +144,45 @@
 
     .banner-img {
         min-width: 70vw;
+    }
+
+    .shop-cart-container {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        align-items: center;
+        margin-top: 30px;
+    }
+
+    .shop-cart {
+        width: calc(50% - 20px); /* Uwzględniając marginesy */
+        margin: 5px;
+    }
+
+
+
+}
+
+
+@media (min-width: 992px) {
+
+    .banner-img {
+        min-width: 10%;
+    }
+
+    .banner, .image-container {
+        display: flex;
+        flex-direction: row;
+    }
+
+    .banner, .image-container {
+        display: flex;
+        flex-direction: row;
+    }
+
+    .banner-img {
+        flex: 1; /* Obrazy zajmują równą przestrzeń w kontenerze */
+        max-width: 50%; /* Każdy obraz ma maksymalnie 50% szerokości kontenera */
     }
 
     .shop-cart-container {

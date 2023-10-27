@@ -132,3 +132,32 @@
     }
 
 }
+
+
+@media (min-width: 992px) {
+
+    .item-img {
+        max-width: 120px;
+        max-height: 180px;
+    }
+
+    .item-container {
+        margin-right: 30px;
+    }
+
+    .bucket-container {
+        min-width: 40%;
+    }
+
+    .bucket-buttons {
+        width: 80%;
+        display: flex;
+        margin: auto;
+    }
+
+    .item-amount {
+        /*padding-right: 35px;*/
+        color: #666;
+    }
+
+}

@@ -1,4 +1,4 @@
-.shop-main-items, .shop-main-items-static {
+.shop-items-container {
     background-color: #fff;
     display: flex;
     position: relative;
@@ -156,21 +156,21 @@
 }
 
 .carousel {
-    background-color: #fff;
+    /*background-color: #fff;*/
     display: flex;
     position: relative;
     flex-direction: column;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    /*box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);*/
     border-radius: 10px;
 }
 
 .carousel-item {
-    background-color: #fff;
+    /*background-color: #fff;*/
     display: flex;
     position: relative;
     flex-direction: column;
-    padding: 10px 30px;
-
+    /*padding: 10px 30px;*/
+    padding-bottom: 10px;
     border-radius: 10px;
 }
 
@@ -212,6 +212,10 @@ a.carousel-control-prev button, a.carousel-control-next button {
 .carousel-control-prev-icon {
     filter: invert(1);
     margin-right: 20px;
+}
+
+.about-container {
+    display: none;
 }
 
 @media (min-width: 576px) {
@@ -277,9 +281,12 @@ a.carousel-control-prev button, a.carousel-control-next button {
 
 
 @media (min-width: 768px) {
-    .item-container {
+
+    .carousel-mobile {
+        display: none;
+    }
+    .item-container-cart {
         display: flex;
-        /*justify-content: space-between; !* Opcjonalnie, jeśli chcesz, aby elementy były rozłożone równomiernie w kontenerze *!*/
     }
 
     .item-img {
@@ -302,7 +309,9 @@ a.carousel-control-prev button, a.carousel-control-next button {
         justify-self: flex-start;
         align-self: center;
         list-style-type: none;
+        font-weight: 300;
     }
+
 
     .about-item {
         margin: 0;
@@ -317,4 +326,52 @@ a.carousel-control-prev button, a.carousel-control-next button {
         margin-top: 30px;
     }
 }
+
+.item-container-cart {
+    margin: 0;
+}
+
+.about-desc {
+    padding: 10px;
+    font-weight: 300;
+}
+
+.social-media {
+    display: flex;
+    justify-content: center;
+}
+
+.social-media i {
+    margin: 10px;
+    padding: 5px;
+    font-size: 25px;
+    background-color: #eefeff;
+    border-radius: 50%;
+}
+
+@media (min-width: 992px) {
+    .shop-items-group {
+        display: flex;
+        justify-content: space-between;
+    }
+    .carousel-item {
+        display: flex;
+        justify-content: space-between;
+    }
+}
+
+.shop-items-group {
+    display: flex;
+    justify-content: space-between;
+}
+
+.carousel {
+    width: 100%;
+}
+
+.shop-items-container {
+    flex: 1;
+    margin: 0 10px;
+}
+
 
