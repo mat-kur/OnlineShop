@@ -53,8 +53,16 @@ header.main-header {
 }
 
 
-@media (min-width: 992px) {
+@media (min-width: 576px) {
 
+    .main-header {
+        margin-bottom: 100px;
+    }
+
+}
+
+
+@media (min-width: 768px) {
     .search-header {
         display: block;
     }
@@ -71,6 +79,14 @@ header.main-header {
         border-bottom: 1px solid rgba(119,119,119,.17);
 
     }
+
+    .main-header {
+        margin-bottom: 0;
+    }
+}
+
+
+@media (min-width: 992px) {
 
     .whatsapp-support {
         display: flex;

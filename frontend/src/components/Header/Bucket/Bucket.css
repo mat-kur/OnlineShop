@@ -133,6 +133,18 @@
 
 }
 
+@media (min-width: 768px) {
+
+    .item-img {
+        max-width: 100px;
+        max-height: 130px;
+    }
+
+    .bucket-container {
+        min-width: 50%;
+    }
+
+}
 
 @media (min-width: 992px) {
 

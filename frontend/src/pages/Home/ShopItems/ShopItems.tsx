@@ -91,7 +91,7 @@ export const ShopItems = () => {
                 setCardsToShow(3);
             } else if (window.innerWidth >= 768) {
                 setCardsToShow(2);
-            } else if (window.innerWidth >= 576) {
+            } else if (window.innerWidth <= 576) {
                 setCardsToShow(1);
             }
         };
@@ -118,7 +118,7 @@ export const ShopItems = () => {
 
     return (
         <>
-            <h2 className="offers-title">OFFERS</h2>
+            <h2 className="offers-title">PC GAMES OFFERS</h2>
             <div className="item-container-cart">
                 <div className="carousel-768">
                     <Carousel>

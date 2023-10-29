@@ -1,15 +1,3 @@
-/*.desktop-list {*/
-/*    display: flex;*/
-/*}*/
-
-/*.desktop-item {*/
-/*    text-decoration: none;*/
-/*    color: #333333;*/
-/*    font-weight: 700;*/
-/*    font-size: 14px;*/
-/*    padding: 10px;*/
-/*    margin-right: 10px;*/
-/*}*/
 
 .desktop-arrow {
     margin-right: 5px;
@@ -71,6 +59,13 @@
 }
 
 @media (min-width: 576px) {
+    .desktop-nav {
+        display: none;
+    }
+}
+
+
+@media (min-width: 768px) {
     .desktop-nav {
         display: block;
     }
