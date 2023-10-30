@@ -158,9 +158,9 @@
     }
 
     .bucket-container {
-        min-width: 40%;
-    }
+        min-width: 30%;
 
+    }
     .bucket-buttons {
         width: 80%;
         display: flex;

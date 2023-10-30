@@ -4,6 +4,7 @@
     color: #336699;
 }
 
+
 .desktop-nav {
     display: none;
 }
@@ -13,7 +14,7 @@
     /*flex-direction: column; !* Zmieniamy na kolumnę, aby sub-menu pojawiało się poniżej "My account" *!*/
 }
 
-.desktop-item {
+.desktop-item, .desktop-item-submenu {
     text-decoration: none;
     color: #333333;
     font-weight: 300;
@@ -58,6 +59,10 @@
     background-color: #f5f5f5;
 }
 
+.desktop-item-submenu {
+    margin-right: auto;
+}
+
 @media (min-width: 576px) {
     .desktop-nav {
         display: none;
@@ -69,5 +74,45 @@
     .desktop-nav {
         display: block;
     }
+
+    .desktop-list a, .desktop-item-submenu {
+        background-image: linear-gradient(
+                to right,
+                #54b3d6,
+                #54b3d6 50%,
+                #000 50%
+        );
+        background-size: 200% 100%;
+        background-position: -100%;
+        display: inline-block;
+        /*padding: 5px 0;*/
+        position: relative;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        transition: all 0.3s ease-in-out;
+    }
+
+    .desktop-list a:before{
+        content: '';
+        background: #54b3d6;
+        display: block;
+        position: absolute;
+        bottom: -3px;
+        left: 0;
+        width: 0;
+        height: 3px;
+        transition: all 0.3s ease-in-out;
+    }
+
+    .desktop-list a:hover {
+        background-position: 0;
+    }
+
+    .desktop-list a:hover::before{
+        width: 100%;
+    }
+
 }
+
+
 

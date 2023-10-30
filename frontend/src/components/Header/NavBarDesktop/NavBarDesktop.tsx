@@ -12,7 +12,10 @@ export const NavBarDesktop = () => {
         <nav className="desktop-nav">
             <ul className="desktop-list">
                 <Link className="desktop-item" to='/'>Homepage</Link>
-                <li className="desktop-item" onClick={toggleSubMenu}>
+                <Link className="desktop-item" to='/'>Support</Link>
+                <Link className="desktop-item" to='/products-list'>Products</Link>
+                <Link className="desktop-item" to='/'>Menu 2</Link>
+                <li className="desktop-item-submenu" onClick={toggleSubMenu}>
                     My account <i className={`${isSubMenuOpen ? 'desktop-arrow fa-solid fa-caret-up' : 'desktop-arrow fa-solid fa-caret-down'}`}></i>
                     <ul className={`${isSubMenuOpen ? 'desktop-submenu-open' : 'desktop-submenu'}`}>
                         <li className="li-submenu-item"><Link className='desktop-submenu-item' to="#">My profile</Link></li>
@@ -21,9 +24,6 @@ export const NavBarDesktop = () => {
                         <li className="li-submenu-item"><Link className='desktop-submenu-item' to="#">SubMenu 4</Link></li>
                     </ul>
                 </li>
-                <Link className="desktop-item" to='/'>Support</Link>
-                <Link className="desktop-item" to='/'>Menu 1</Link>
-                <Link className="desktop-item" to='/'>Menu 2</Link>
             </ul>
         </nav>
     );

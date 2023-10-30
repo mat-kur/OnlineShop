@@ -7,6 +7,7 @@ import logoitem from "../ShopCards/100b9e36-03d1-4c4e-98a2-0f51b0753b7c.png"
 import {Carousel} from "react-bootstrap";
 
 
+
 interface Product {
     id: number;
     title: string;
@@ -84,6 +85,7 @@ export const ShopItems = () => {
 
     const [offersProducts, setOffersProducts] = useState(MOCK_PRODUCTS);
     const [cardsToShow, setCardsToShow] = useState(2);
+
 
     useEffect(() => {
         const updateCardsToShow = () => {

@@ -8,7 +8,7 @@ export const ShopCategories = () => {
 
     return (
         <>
-            <h2 className="categories offers-title">CATEGORIES</h2>
+            <h2 className="categories offers-title">GAMES CATEGORIES</h2>
             <div className="categories-container">
                 <div className="wrapper-categories">
                     <i className="categories-icon fa-solid fa-khanda"></i>
@@ -25,6 +25,14 @@ export const ShopCategories = () => {
                 <div className="wrapper-categories">
                     <i className="categories-icon fa-solid fa-volleyball"></i>
                     <Link className='link-categories' to="/">SPORT</Link>
+                </div>
+                <div className="wrapper-categories">
+                    <i className="categories-icon fa-solid fa-parachute-box"></i>
+                    <Link className='link-categories' to="/">BATTLE ROYALE</Link>
+                </div>
+                <div className="wrapper-categories">
+                    <i className="categories-icon fa-solid fa-truck-plane"></i>
+                    <Link className='link-categories' to="/">SIMULATORS</Link>
                 </div>
             </div>
         </>

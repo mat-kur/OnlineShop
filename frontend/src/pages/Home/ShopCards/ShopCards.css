@@ -200,6 +200,19 @@
         margin: 5px;
     }
 
+    .shop-cart-container {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        align-items: center;
+        margin-top: 30px;
+    }
+
+    .shop-cart {
+        width: calc(33.3333% - 10px); /* Uwzględniając marginesy */
+        margin: 5px;
+    }
+
 
 
 }

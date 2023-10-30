@@ -1,0 +1,63 @@
+/* Stylowanie samego inputa */
+.number-input {
+    width: 100px; /* Szerokość */
+    padding: 8px; /* Wewnętrzny odstęp */
+    border: 2px solid #336699; /* Kolor obramowania */
+    border-radius: 4px; /* Zaokrąglenie rogu */
+    font-size: 16px; /* Wielkość czcionki */
+    color: #333; /* Kolor tekstu */
+    background-color: #f5f5f5; /* Kolor tła */
+    outline: none; /* Usunięcie podświetlenia podczas aktywacji */
+}
+
+/* Stylowanie strzałek w input */
+.number-input::-webkit-inner-spin-button,
+.number-input::-webkit-outer-spin-button {
+    appearance: none; /* Ukrycie domyślnych strzałek w przeglądarkach bazujących na WebKit */
+}
+
+/* Stylowanie podczas fokusu (kiedy input jest aktywowany) */
+.number-input:focus {
+    border-color: #6699cc; /* Kolor obramowania podczas fokusu */
+    background-color: #e6f2ff; /* Kolor tła podczas fokusu */
+}
+
+.prod-details {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 10px;
+    margin-top: 60px;
+    padding: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
+}
+
+.prod-img img {
+    max-width: 250px;
+    max-height: 220px;
+    margin-top: 30px;
+}
+
+.prod-title {
+    font-size: 24px;
+}
+
+.prod-rate {
+    display: flex;
+    flex-direction: row;
+}
+
+.product-button {
+    margin-left: auto;
+}
+
+.prod-price-cont {
+    display: flex;
+}
+
+.prod-price {
+    display: block;
+    border: 1px solid black;
+    padding: 5px;
+}
