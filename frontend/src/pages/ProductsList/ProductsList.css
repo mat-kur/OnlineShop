@@ -290,8 +290,9 @@ input[type="checkbox"] {
         flex-direction: row;
     }
 
-    .prod-categories {
+    .prod-categories-list{
         display: flex;
+        flex-direction: row;
     }
 
     .single-product-img img {

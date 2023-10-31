@@ -7,6 +7,7 @@ import {Footer} from "./components/Footer/Footer";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import {ProductsList} from "./pages/ProductsList/ProductsList";
 import {ProductDetails} from "./pages/ProductDetails/ProductDetails";
+import {WishList} from "./pages/WishList/WishList";
 
 
 function App() {
@@ -17,6 +18,7 @@ function App() {
             <Route path="/" element={<Home/>}/>
             <Route path="/products-list" element={<ProductsList/>}/>
             <Route path="/product-details/:id" element={<ProductDetails/>}/>
+            <Route path="/my-account/wish-list/:id" element={<WishList/>}/>
         </Routes>
         <Footer/>
     </div>

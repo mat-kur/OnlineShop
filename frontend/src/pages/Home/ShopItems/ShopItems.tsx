@@ -5,6 +5,7 @@ import logo4 from "./i-cyberpunk-2077-digital.png"
 import logo5 from "./elex2.png"
 import logoitem from "../ShopCards/100b9e36-03d1-4c4e-98a2-0f51b0753b7c.png"
 import {Carousel} from "react-bootstrap";
+import { Link } from 'react-router-dom';
 
 
 
@@ -161,7 +162,7 @@ export const ShopItems = () => {
                                                     <p className="price-before">{product.priceBefore}</p>
                                                 </div>
                                                 <div className="button-detail">
-                                                    <button className="detail">VIEW DETAILS</button>
+                                                    <button className="detail"><Link to='/product-details/1'>VIEW DETAILS</Link></button>
                                                 </div>
                                             </div>
                                         </div>

@@ -166,6 +166,11 @@
     font-size: 16px;
 }
 
+.button-detail button a {
+    text-decoration: none;
+    color: #ffffff;
+}
+
 .carousel {
     /*background-color: #fff;*/
     display: flex;

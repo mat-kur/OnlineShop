@@ -54,7 +54,7 @@ export const ProductsList = () => {
                     </select>
                 </div>
             </div>
-            <div className="prod-categories">
+            <div className="prod-categories-list">
                 <div className="filters-container">
                     <div className="search-filters-container">
                         <p className="filters-container-paragraph"><i
