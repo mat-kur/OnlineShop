@@ -33,7 +33,7 @@ export const NavBar: React.FC<NavBarProps> = ({isMenuOpen, setIsMenuOpen, toggle
                                 </ul>
                             )}
                         </li>
-                        <li className="main-nav-item"><Link className='main-nav-item' to="#">Products</Link></li>
+                        <li className="main-nav-item"><Link className='main-nav-item' to="/products-list">Products</Link></li>
                         <li className="main-nav-item"><Link className='main-nav-item' to="#">Homepage</Link></li>
 
                     </ul>

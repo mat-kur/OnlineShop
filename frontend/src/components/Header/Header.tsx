@@ -5,6 +5,7 @@ import {NavBar} from "./NavBar/NavBar";
 import {Bucket} from "./Bucket/Bucket";
 import {SearchBar} from "./NavBar/SearchBar/SearchBar";
 import {NavBarDesktop} from "./NavBarDesktop/NavBarDesktop";
+import {Link} from "react-router-dom";
 
 
 
@@ -25,7 +26,7 @@ export const Header: React.FC<HeaderProps> = props => {
         <>
             <header className="main-header">
                 <i onClick={toggleMenu} className="header-bars fa-solid fa-bars"></i>
-                <h1 className="header-title"><span>O</span>nline-<span>S</span>hop</h1>
+                <h1 className="header-title"><Link to="/"><span>O</span>nline-<span>S</span>hop</Link></h1>
                 <div className="search-header">
                     <SearchBar/>
                 </div>

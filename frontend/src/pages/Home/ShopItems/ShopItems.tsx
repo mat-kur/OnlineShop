@@ -162,7 +162,7 @@ export const ShopItems = () => {
                                                     <p className="price-before">{product.priceBefore}</p>
                                                 </div>
                                                 <div className="button-detail">
-                                                    <button className="detail"><Link to='/product-details/1'>VIEW DETAILS</Link></button>
+                                                    <button className="detail"><a href='/product-details/1'>VIEW DETAILS</a></button>
                                                 </div>
                                             </div>
                                         </div>

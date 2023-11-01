@@ -6,6 +6,11 @@ header.main-header {
     padding-top: 15px;
 }
 
+.header-title a {
+    text-decoration: none;
+    color: #000000;
+}
+
 .header-bars, .header-bucket {
     font-size: 26px;
 }

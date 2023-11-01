@@ -1,7 +1,7 @@
 .carousel-wrapper {
     /*height: 400px;*/
-    min-height: 300px;
-    max-height: 300px;
+    min-height: 150px;
+    max-height: 150px;
     overflow: hidden;
     padding: 10px;
 }
@@ -13,3 +13,13 @@
     object-position: center top !important;
 }
 
+@media (min-width: 992px) {
+
+    .carousel-wrapper {
+        min-height: 300px;
+        max-height: 300px;
+        overflow: hidden;
+        padding: 10px;
+    }
+
+}
