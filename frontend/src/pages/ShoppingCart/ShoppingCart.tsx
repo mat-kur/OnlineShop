@@ -38,8 +38,10 @@ export const ShoppingCart = () => {
                         </div>
                         <div className="quantity-container-768">
                             <p className="quantity-768">Quantity</p>
-                            <input type="number"/>
-                            <button className="quantity-delete"><i className="fa-solid fa-trash-can"></i></button>
+                            <div className="quality-input">
+                                <input type="number"/>
+                                <button className="quantity-delete"><i className="fa-solid fa-trash-can"></i></button>
+                            </div>
                         </div>
                     </div>
                     <div className="shopping-cart-wrapper">

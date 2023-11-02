@@ -9,6 +9,8 @@ import {ProductsList} from "./pages/ProductsList/ProductsList";
 import {ProductDetails} from "./pages/ProductDetails/ProductDetails";
 import {WishList} from "./pages/WishList/WishList";
 import {ShoppingCart} from "./pages/ShoppingCart/ShoppingCart";
+import {MyAccountNav} from "./pages/MyAccount/MyAccountNav/MyAccountNav";
+import {MyAccountInfo} from "./pages/MyAccount/MyAccountInfo/MyAccountInfo";
 
 
 function App() {
@@ -21,6 +23,7 @@ function App() {
             <Route path="/product-details/:id" element={<ProductDetails/>}/>
             <Route path="/my-account/wish-list/:id" element={<WishList/>}/>
             <Route path="/my-account/cart/:id" element={<ShoppingCart/>}/>
+            <Route path="/my-account/1" element={<MyAccountInfo/>}/>
         </Routes>
         <Footer/>
     </div>

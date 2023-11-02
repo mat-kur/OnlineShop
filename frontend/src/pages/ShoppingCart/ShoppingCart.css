@@ -244,12 +244,45 @@ p.unit-price, .subtotal-price {
     }
 
     .quantity-container-768 {
+        display: flex;
+        flex-direction: column;
+        /*align-items: center;*/
+        justify-content: center;
         margin-left: auto;
-        display: block;
+        max-width: 150px;
     }
 
+    .shopping-cart-wrapper, .shopping-cart-product {
+        width: 100%;
+    }
+
+    .shopping-cart-wrapper-infos {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+    }
+
+
+    .shopping-cart-prodcut-title {
+        justify-self: center;
+        min-width: 150px;
+    }
+
+
+    .unit-price-p, .subtotal {
+        min-width: 160px;
+    }
 }
 @media (min-width: 992px) {
+
+    .summary-info-wrapper {
+        flex: 2;
+    }
+
+    .shopping-cart-product {
+        flex: 1;
+    }
+
     .shopping-cart-container {
         flex-direction: row;
         align-items: start;
@@ -280,7 +313,7 @@ p.unit-price, .subtotal-price {
     }
 
     .unit-price-p, .subtotal {
-        min-width: 180px;
+        min-width: 130px;
     }
 
     .shopping-cart-product {
