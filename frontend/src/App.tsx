@@ -11,6 +11,7 @@ import {WishList} from "./pages/WishList/WishList";
 import {ShoppingCart} from "./pages/ShoppingCart/ShoppingCart";
 import {MyAccountNav} from "./pages/MyAccount/MyAccountNav/MyAccountNav";
 import {MyAccountInfo} from "./pages/MyAccount/MyAccountInfo/MyAccountInfo";
+import {MyAccountAddress} from "./pages/MyAccount/MyAccountAddress/MyAccountAddress";
 
 
 function App() {
@@ -24,6 +25,7 @@ function App() {
             <Route path="/my-account/wish-list/:id" element={<WishList/>}/>
             <Route path="/my-account/cart/:id" element={<ShoppingCart/>}/>
             <Route path="/my-account/1" element={<MyAccountInfo/>}/>
+            <Route path="/my-account/address/1" element={<MyAccountAddress/>}/>
         </Routes>
         <Footer/>
     </div>
