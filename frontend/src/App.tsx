@@ -8,6 +8,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import {ProductsList} from "./pages/ProductsList/ProductsList";
 import {ProductDetails} from "./pages/ProductDetails/ProductDetails";
 import {WishList} from "./pages/WishList/WishList";
+import {ShoppingCart} from "./pages/ShoppingCart/ShoppingCart";
 
 
 function App() {
@@ -19,6 +20,7 @@ function App() {
             <Route path="/products-list" element={<ProductsList/>}/>
             <Route path="/product-details/:id" element={<ProductDetails/>}/>
             <Route path="/my-account/wish-list/:id" element={<WishList/>}/>
+            <Route path="/my-account/cart/:id" element={<ShoppingCart/>}/>
         </Routes>
         <Footer/>
     </div>
