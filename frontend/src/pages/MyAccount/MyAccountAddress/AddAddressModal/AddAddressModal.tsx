@@ -9,7 +9,7 @@ export const AddAddressModal: React.FC<AddAddressModalTypes> = ({isOpen,setIsOpe
     return (
         <div>
             <div className="add-address-container">
-            <button onClick={toggleModal}>Add Address</button>
+            <button className="modal-button" onClick={toggleModal}>Add Address</button>
             </div>
 
             {isOpen && (
@@ -17,12 +17,12 @@ export const AddAddressModal: React.FC<AddAddressModalTypes> = ({isOpen,setIsOpe
                     <div className="modal-content">
                         <span className="close-button" onClick={toggleModal}>×</span>
                         <h2>Add Address</h2>
-                        <input type="text" placeholder="Full Name" />
-                        <input type="text" placeholder="Phone Number" />
-                        <input type="text" placeholder="Country" />
-                        <input type="text" placeholder="City" />
-                        <input type="text" placeholder="Postal Code" />
-                        <textarea placeholder="Address"></textarea>
+                        <input className="input-modal-address" type="text" placeholder="Full Name" />
+                        <input className="input-modal-address" type="text" placeholder="Phone Number" />
+                        <input className="input-modal-address" type="text" placeholder="Country" />
+                        <input className="input-modal-address" type="text" placeholder="City" />
+                        <input className="input-modal-address" type="text" placeholder="Postal Code" />
+                        <textarea className="input-modal-address" placeholder="Address"></textarea>
                             <button className="modal-button-add" onClick={toggleModal}>Add Address</button>
                     </div>
                 </div>

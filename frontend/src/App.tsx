@@ -12,6 +12,7 @@ import {ShoppingCart} from "./pages/ShoppingCart/ShoppingCart";
 import {MyAccountNav} from "./pages/MyAccount/MyAccountNav/MyAccountNav";
 import {MyAccountInfo} from "./pages/MyAccount/MyAccountInfo/MyAccountInfo";
 import {MyAccountAddress} from "./pages/MyAccount/MyAccountAddress/MyAccountAddress";
+import {MyOrders} from "./pages/MyAccount/MyOrders/MyOrders";
 
 
 function App() {
@@ -26,6 +27,7 @@ function App() {
             <Route path="/my-account/cart/:id" element={<ShoppingCart/>}/>
             <Route path="/my-account/1" element={<MyAccountInfo/>}/>
             <Route path="/my-account/address/1" element={<MyAccountAddress/>}/>
+            <Route path="/my-account/myorders/1" element={<MyOrders/>}/>
         </Routes>
         <Footer/>
     </div>
