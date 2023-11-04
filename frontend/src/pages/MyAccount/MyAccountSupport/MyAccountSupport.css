@@ -1,5 +1,5 @@
 .my-account-support {
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     margin: 10px;
 }
 
@@ -46,4 +46,37 @@ p.single-ticket-id span.single-ticket-status-open {
 p.single-ticket-id span.single-ticket-status-closed {
     color: #ef447c;
     background-color: #fecaca;
+}
+
+@media (min-width: 992px) {
+
+    .my-account-support {
+        display: flex;
+        flex-direction: row;
+    }
+    .support-container {
+        flex: 1;
+    }
+
+    .single-ticket {
+        flex-direction: row;
+        justify-content: space-around;
+        padding: 0;
+    }
+
+    .subject-ticket {
+        min-width: 200px;
+    }
+
+    .status-ticket, .status-ticket-open {
+        min-width: 200px;
+    }
+
+    .status-ticket-open span {
+        max-width: 55px;
+    }
+
+    .status-ticket span {
+        max-width: 80px;
+    }
 }

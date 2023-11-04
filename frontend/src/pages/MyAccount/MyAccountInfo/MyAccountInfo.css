@@ -5,7 +5,7 @@
 }
 
 .my-account-info {
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 .info-p {
@@ -33,4 +33,47 @@
     margin-top: 10px;
     border-radius: 5px;
     padding: 5px 10px;
+}
+
+.account-changes-992, .input-group {
+    display: flex;
+    flex-direction: column;
+}
+
+@media (min-width: 992px) {
+    .my-account-info-992 {
+        display: flex;
+    }
+
+    .info-container {
+        flex: 1;
+        margin-top: 20px;
+    }
+
+    .account-changes-992 {
+        flex-direction: row;
+        /*width: 100%;*/
+        margin-bottom: 10px;
+    }
+
+    .account-changes-992 input {
+        width: 50%;
+    }
+
+    .input-group input {
+        width: 100%;
+    }
+
+    .first-input {
+        margin-right: 20px;
+    }
+
+}
+
+@media (min-width: 1200px) {
+
+    .wrapper-1200 {
+        min-width: 350px;
+    }
+
 }

@@ -16,37 +16,39 @@ export const MyAccountAddress = () => {
     }
 
     return (
-        <div className="adress-wrapper">
+        <div className="wrapper-adress">
             <CurrentURL/>
-            <MyAccountNav/>
-            <div className="address-container">
-                <h2>My Address</h2>
-                <div className="card">
-                    <h3>John Doe</h3>
-                    <p>Olavarría, Buenos Aires</p>
-                    <p>7400</p>
-                    <p>Av. Colón 0101</p>
-                    <p>(+01)1234567890</p>
-                    <div className="icons">
-                        <span>🖊️</span>
-                        <span>🗑️</span>
-                    </div>
+            <div className="adress-wrapper">
+                <div className="wrapper-1200">
+                    <MyAccountNav/>
                 </div>
-                <div className="card">
-                    <h3>John Doe</h3>
-                    <p>Olavarría, Buenos Aires</p>
-                    <p>7400</p>
-                    <p>Av. Colón 0101</p>
-                    <p>(+01)1234567890</p>
-                    <div className="icons">
-                        <span>🖊️</span>
-                        <span>🗑️</span>
+                <div className="address-container">
+                    <h2>My Address</h2>
+                    <div className="card">
+                        <h3>John Doe</h3>
+                        <p>Olavarría, Buenos Aires</p>
+                        <p>7400</p>
+                        <p>Av. Colón 0101</p>
+                        <p>(+01)1234567890</p>
+                        <div className="icons">
+                            <span>🖊️</span>
+                            <span>🗑️</span>
+                        </div>
+                    </div>
+                    <div className="card">
+                        <h3>John Doe</h3>
+                        <p>Olavarría, Buenos Aires</p>
+                        <p>7400</p>
+                        <p>Av. Colón 0101</p>
+                        <p>(+01)1234567890</p>
+                        <div className="icons">
+                            <span>🖊️</span>
+                            <span>🗑️</span>
+                        </div>
                     </div>
                 </div>
             </div>
-            <>
-                <AddAddressModal isOpen={isOpen} toggleModal={toggleModal} />
-            </>
+            <AddAddressModal isOpen={isOpen} toggleModal={toggleModal}/>
         </div>
     );
 };

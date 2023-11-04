@@ -1,13 +1,13 @@
 .address-container {
-    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
     background-color: #ffffff;
-    max-width: 400px;
-    /*box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);*/
 }
 
 .adress-wrapper {
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
     margin: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 .modal-button {
@@ -19,10 +19,13 @@ h2 {
 }
 
 .card {
+    display: flex;
+    flex-direction: column;
     border: 1px solid #00A4EF;
     padding: 15px;
     margin-bottom: 15px;
     position: relative;
+    flex: 1;
 }
 
 .icons {
@@ -34,5 +37,30 @@ h2 {
 .icons span {
     margin-left: 10px;
     cursor: pointer;
+}
+
+.chuj11 {
+    width: 100%;
+}
+
+@media (min-width: 992px) {
+
+    .adress-wrapper {
+        display: flex;
+    }
+
+    .card {
+        flex: 1;
+        /*min-width: 500px;*/
+    }
+
+    .address-container {
+        flex: 1;
+    }
+
+    .my-account-userinfo {
+        margin-top: 15px;
+    }
+
 }
 

@@ -14,6 +14,8 @@ import {MyAccountInfo} from "./pages/MyAccount/MyAccountInfo/MyAccountInfo";
 import {MyAccountAddress} from "./pages/MyAccount/MyAccountAddress/MyAccountAddress";
 import {MyOrders} from "./pages/MyAccount/MyOrders/MyOrders";
 import {MyAccountSupport} from "./pages/MyAccount/MyAccountSupport/MyAccountSupport";
+import {Login} from "./pages/Login/Login";
+import {Register} from "./pages/Register/Register";
 
 
 function App() {
@@ -26,10 +28,12 @@ function App() {
             <Route path="/product-details/:id" element={<ProductDetails/>}/>
             <Route path="/my-account/wish-list/:id" element={<WishList/>}/>
             <Route path="/my-account/cart/:id" element={<ShoppingCart/>}/>
-            <Route path="/my-account/info/1" element={<MyAccountInfo/>}/>
-            <Route path="/my-account/address/1" element={<MyAccountAddress/>}/>
-            <Route path="/my-account/myorders/1" element={<MyOrders/>}/>
-            <Route path="/my-account/support/1" element={<MyAccountSupport/>}/>
+            <Route path="/my-account/info/:id" element={<MyAccountInfo/>}/>
+            <Route path="/my-account/address/:id" element={<MyAccountAddress/>}/>
+            <Route path="/my-account/myorders/:id" element={<MyOrders/>}/>
+            <Route path="/my-account/support/:id" element={<MyAccountSupport/>}/>
+            <Route path="/login" element={<Login/>}/>
+            <Route path="/register" element={<Register/>}/>
         </Routes>
         <Footer/>
     </div>

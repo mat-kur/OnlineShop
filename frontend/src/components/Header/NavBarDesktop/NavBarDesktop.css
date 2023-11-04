@@ -11,6 +11,7 @@
 
 .desktop-list {
     display: flex;
+    position: relative;
     /*flex-direction: column; !* Zmieniamy na kolumnę, aby sub-menu pojawiało się poniżej "My account" *!*/
 }
 
@@ -63,6 +64,13 @@
     margin-right: auto;
 }
 
+.login-reg-panel {
+    display: flex;
+    position: absolute;
+    top: 0;
+    right: 10px;
+}
+
 @media (min-width: 576px) {
     .desktop-nav {
         display: none;
@@ -111,6 +119,16 @@
     .desktop-list a:hover::before{
         width: 100%;
     }
+
+    .desktop-item:nth-last-child(2) { /* Zakładając, że są to ostatnie dwa elementy na liście */
+        margin-left: auto;
+    }
+
+    .register-nav-btn, .login-nav-btn {
+        font-weight: 700;
+        font-size: 18px;
+    }
+
 
 }
 
