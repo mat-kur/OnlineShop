@@ -2,16 +2,14 @@ import "./MyAccountInfo.css";
 import {MyAccountNav} from "../MyAccountNav/MyAccountNav";
 import {Link} from "react-router-dom";
 import React from "react";
+import {CurrentURL} from "../../../components/CurrentURL/CurrentURL";
 
 
 export const MyAccountInfo = () => {
 
     return (
         <div className="my-account-info">
-            <div className="links-nav">
-                <Link to="/" className="homelink">Home</Link>
-                <Link to="#" className="homelink"><i className="arrow-nav fa-solid fa-caret-right"></i> My Account</Link>
-            </div>
+            <CurrentURL/>
             <MyAccountNav/>
             <div className="info-container">
                 <p className="info-p">My Account</p>

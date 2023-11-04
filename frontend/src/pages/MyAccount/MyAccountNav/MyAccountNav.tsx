@@ -15,10 +15,10 @@ export const MyAccountNav = () => {
                 </div>
                 <nav className="my-account-navbar">
                     <ul className="my-account-list">
-                        <Link to="#" className="my-account-item"><i className="fa-regular fa-user"></i> My Account</Link>
-                        <Link to="#" className="my-account-item"><i className="fa-solid fa-address-book"></i> My Address</Link>
-                        <Link to="#" className="my-account-item"><i className="fa-regular fa-clipboard"></i> My Order</Link>
-                        <Link to="#" className="my-account-item"><i className="fa-solid fa-headset"></i> Support Tickets</Link>
+                        <Link to="/my-account/info/1" className="my-account-item"><i className="fa-regular fa-user"></i> My Account</Link>
+                        <Link to="/my-account/address/1" className="my-account-item"><i className="fa-solid fa-address-book"></i> My Address</Link>
+                        <Link to="/my-account/myorders/1" className="my-account-item"><i className="fa-regular fa-clipboard"></i> My Order</Link>
+                        <Link to="/my-account/support/1" className="my-account-item"><i className="fa-solid fa-headset"></i> Support Tickets</Link>
                         <Link to="#" className="my-account-item"><i className="fa-solid fa-right-from-bracket"></i> Log Out</Link>
                     </ul>
                 </nav>

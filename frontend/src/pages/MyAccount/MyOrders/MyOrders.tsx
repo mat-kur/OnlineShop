@@ -2,6 +2,8 @@ import "./MyOrders.css"
 import {MyAccountNav} from "../MyAccountNav/MyAccountNav";
 
 import fifalogo from "../../Home/ShopItems/i-fifa-23-gra-pc.png"
+import {CurrentURL} from "../../../components/CurrentURL/CurrentURL";
+import React from "react";
 
 
 export const MyOrders = () => {
@@ -9,6 +11,7 @@ export const MyOrders = () => {
 
     return (
         <div className="my-orders-container">
+            <CurrentURL/>
             <MyAccountNav/>
             <div className="my-orders-wrapper">
                 <p className="my-orders-title">My Orders</p>

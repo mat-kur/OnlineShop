@@ -4,9 +4,10 @@ import React, {useState} from "react";
 import {AddAddressModal} from "./AddAddressModal/AddAddressModal";
 import {HeaderProps} from "../../../components/Header/Header.types";
 import {AddAddressModalTypes} from "./AddAddressModal/AddAddressModal.types";
+import {CurrentURL} from "../../../components/CurrentURL/CurrentURL";
 
 
-export const MyAccountAddress: React.FC<AddAddressModalTypes> = () => {
+export const MyAccountAddress = () => {
 
     const [isOpen, setIsOpen] = useState(false);
 
@@ -16,6 +17,7 @@ export const MyAccountAddress: React.FC<AddAddressModalTypes> = () => {
 
     return (
         <div className="adress-wrapper">
+            <CurrentURL/>
             <MyAccountNav/>
             <div className="address-container">
                 <h2>My Address</h2>
