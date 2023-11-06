@@ -1,64 +1,3 @@
-/*.admin-nav {*/
-/*    position: fixed;*/
-/*    right: 0;*/
-/*    top: 0;*/
-/*    width: 50px; !* Stała szerokość dla ikon *!*/
-/*    height: 100%;*/
-/*    background-color: #333;*/
-/*    z-index: 1000;*/
-/*    transition: width 0.5s; !* Animacja może pozostać dla większych ekranów *!*/
-/*}*/
-
-/*.nav-items {*/
-/*    list-style-type: none;*/
-/*    padding: 0;*/
-/*    margin: 0;*/
-/*}*/
-
-/*.nav-item {*/
-/*    position: relative; !* Dla pozycjonowania sub-menu *!*/
-/*}*/
-
-/*.nav-item a {*/
-/*    text-decoration: none;*/
-/*    color: white;*/
-/*    padding: 10px;*/
-/*    display: flex;*/
-/*    align-items: center;*/
-/*    white-space: nowrap; !* Zapobiega zawijaniu tekstu *!*/
-/*}*/
-
-/*.nav-text {*/
-/*    display: none; !* Ukrywanie tekstu dla wszystkich rozmiarów ekranów *!*/
-/*}*/
-
-/*.sub-menu {*/
-/*    display: none;*/
-/*    position: absolute;*/
-/*    right: 100%; !* Wysuwane z prawej strony ikony *!*/
-/*    top: 0;*/
-/*    background-color: #222;*/
-/*    min-width: 150px; !* Minimalna szerokość sub-menu *!*/
-/*}*/
-
-/*.nav-item:hover .sub-menu {*/
-/*    display: block; !* Pokazuje sub-menu po najechaniu *!*/
-/*}*/
-
-/*.sub-menu a {*/
-/*    padding: 8px 15px;*/
-/*}*/
-
-/*.sub-menu a:hover {*/
-/*    background-color: #444;*/
-/*}*/
-
-/*@media (max-width: 768px) {*/
-/*    !* Na urządzeniach mobilnych sub-menu nie będzie pokazywane *!*/
-/*    .nav-item:hover .sub-menu {*/
-/*        display: none;*/
-/*    }*/
-/*}*/
 
 .admin-nav-list {
     display: flex;
@@ -74,18 +13,71 @@
 
 .admin-nav-list li a span {
     display: none;
+    padding: 0;
+    margin: 0;
 }
 
 .admin-nav-list li a i {
     color: #ffffff;
     font-size: 20px;
-    min-width: 20px;
-    margin-bottom: 20px;
+    min-width: 30px;
 }
 
 .admin-nav-list li {
     display: flex;
-    flex-direction: column;
+    /*flex-direction: column;*/
     align-items: center;
     list-style: none;
+    margin-bottom: 10px;
 }
+
+.admin-nav-list {
+    display: flex;
+    flex-direction: column;
+}
+
+.admin-nav {
+    background-color: #333333;
+}
+
+
+@media (min-width: 1200px) {
+    .admin-nav .admin-nav-list {
+        width: 50px; /* Początkowa szerokość */
+        transition: width 0.3s ease-in-out; /* Animacja szerokości */
+        overflow: hidden; /* Ukryj nadmiar treści poza początkową szerokością */
+    }
+
+    .admin-nav:hover .admin-nav-list {
+        width: 130px; /* Szerokość po najechaniu */
+    }
+
+    .admin-nav-list li a {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: #c4c4c4;
+        text-decoration: none;
+
+    }
+
+    .admin-nav-list li a span {
+        font-size: 14px;
+        display: none; /* Domyślnie tekst jest niewidoczny */
+        white-space: nowrap; /* Zapobiega zawijaniu tekstu */
+        overflow: hidden; /* Ukryj nadmiar treści */
+        text-overflow: ellipsis; /* Dodaj "..." na końcu przyciętego tekstu */
+        margin-left: 10px; /* Odstęp między ikoną a tekstem */
+        transition: display 0.3s ease-in-out; /* Animacja wyświetlania tekstu */
+    }
+
+    .admin-nav:hover .admin-nav-list li a span {
+        display: inline; /* Wyświetl tekst po najechaniu */
+    }
+
+    .admin-nav-list li a:hover {
+        color: #868686;
+    }
+}
+
+
