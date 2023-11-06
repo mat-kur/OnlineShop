@@ -17,6 +17,8 @@ import {MyAccountSupport} from "./pages/MyAccount/MyAccountSupport/MyAccountSupp
 import {Login} from "./pages/Login/Login";
 import {Register} from "./pages/Register/Register";
 import {Dashboard} from "./pages/Admin/Dashboard/Dashboard";
+import {AddProduct} from "./pages/Admin/Products/AddProduct/AddProduct";
+import {ProductList} from "./pages/Admin/Products/ProductList/ProductList";
 
 
 function App() {
@@ -40,6 +42,8 @@ function App() {
             <Route path="/register" element={<Register/>}/>
             {/*admin routes*/}
             <Route path="/admin/dashboard" element={<Dashboard/>}/>
+            <Route path="/admin/products/add-product" element={<AddProduct/>}/>
+            <Route path="/admin/products/products-list" element={<ProductList/>}/>
         </Routes>
         {!isAdminRoute && <Footer/>}
     </div>
