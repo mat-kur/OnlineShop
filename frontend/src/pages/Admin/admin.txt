@@ -1,0 +1,28 @@
+Dashboard:
+
+karty:
+- Orders pending
+- Orders cancelled
+- Orders complletted
+- Today income
+
+- Latest 5 orders
+
+id, produkt, cena, email, data
+
+Orders:
+
+Tabelka z zamówieniami:
+
+https://www.uplabs.com/posts/e-commerce-admin-dashboard-order-page-part-2
+
+Products: (rozwijane menu)
+
+- add product
+- product list (tabelka z produktami, searchbar i paginacja)
+- Hot offers (na górze wyświetlić aktualne karty, które są wyświetlane w karuzeli na stronie głównej, a pod spodem wszystkie produkty
+i check boxy do zaznaczenia żeby zaktualizować listę)
+
+Messages
+
+- wiadomości od użytkowników

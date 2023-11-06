@@ -1,5 +1,5 @@
 import React from 'react';
-import {Route, Routes } from 'react-router-dom';
+import {Route, Routes, useLocation} from 'react-router-dom';
 import './App.css';
 import {Header} from "./components/Header/Header";
 import {Home} from "./pages/Home/Home";
@@ -16,12 +16,16 @@ import {MyOrders} from "./pages/MyAccount/MyOrders/MyOrders";
 import {MyAccountSupport} from "./pages/MyAccount/MyAccountSupport/MyAccountSupport";
 import {Login} from "./pages/Login/Login";
 import {Register} from "./pages/Register/Register";
+import {Dashboard} from "./pages/Admin/Dashboard/Dashboard";
 
 
 function App() {
+    const location = useLocation(); // używając hooka useLocation
+    const isAdminRoute = location.pathname.startsWith('/admin');
+
   return (
     <div className="App">
-        <Header title='test'/>
+        {!isAdminRoute && <Header title="Dada"/>}
         <Routes>
             <Route path="/" element={<Home/>}/>
             <Route path="/products-list" element={<ProductsList/>}/>
@@ -34,8 +38,10 @@ function App() {
             <Route path="/my-account/support/:id" element={<MyAccountSupport/>}/>
             <Route path="/login" element={<Login/>}/>
             <Route path="/register" element={<Register/>}/>
+            {/*admin routes*/}
+            <Route path="/admin/dashboard" element={<Dashboard/>}/>
         </Routes>
-        <Footer/>
+        {!isAdminRoute && <Footer/>}
     </div>
   );
 }
