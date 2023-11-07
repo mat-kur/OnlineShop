@@ -19,6 +19,7 @@ import {Register} from "./pages/Register/Register";
 import {Dashboard} from "./pages/Admin/Dashboard/Dashboard";
 import {AddProduct} from "./pages/Admin/Products/AddProduct/AddProduct";
 import {ProductList} from "./pages/Admin/Products/ProductList/ProductList";
+import {HotDeals} from "./pages/Admin/Products/HotDeals/HotDeals";
 
 
 function App() {
@@ -41,9 +42,11 @@ function App() {
             <Route path="/login" element={<Login/>}/>
             <Route path="/register" element={<Register/>}/>
             {/*admin routes*/}
+
             <Route path="/admin/dashboard" element={<Dashboard/>}/>
             <Route path="/admin/products/add-product" element={<AddProduct/>}/>
             <Route path="/admin/products/products-list" element={<ProductList/>}/>
+            <Route path="/admin/products/hot-deals" element={<HotDeals/>}/>
         </Routes>
         {!isAdminRoute && <Footer/>}
     </div>
