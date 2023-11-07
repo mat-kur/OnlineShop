@@ -23,6 +23,7 @@ http://preview.themeforest.net/item/able-pro-responsive-bootstrap-4-admin-templa
 - product list (tabelka z produktami, searchbar i paginacja)
 - Hot offers (na górze wyświetlić aktualne karty, które są wyświetlane w karuzeli na stronie głównej, a pod spodem wszystkie produkty
 i check boxy do zaznaczenia żeby zaktualizować listę)
+-discounts?
 
 Messages
 
