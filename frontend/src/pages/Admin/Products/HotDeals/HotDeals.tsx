@@ -12,7 +12,6 @@ export const HotDeals = () => {
         {id: 5, title: 'ELEX 2', platform: 'PC', price: '20$'},
         {id: 6, title: 'ELEX 2', platform: 'PC', price: '20$'},
         {id: 7, title: 'ELEX 2', platform: 'PC', price: '20$'},
-        // Dodaj tutaj inne produkty...
     ];
 
     return (
