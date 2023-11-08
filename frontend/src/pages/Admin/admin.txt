@@ -28,3 +28,5 @@ i check boxy do zaznaczenia żeby zaktualizować listę)
 Messages
 
 - wiadomości od użytkowników
+
+https://preview.themeforest.net/item/shoppoint-ecommerce-admin-dashboard-reactjs-template/full_screen_preview/47313740
