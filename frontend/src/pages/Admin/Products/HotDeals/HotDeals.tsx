@@ -2,8 +2,6 @@ import "./HotDeals.css";
 
 import fifa from "../../../Home/ShopItems/i-fifa-23-gra-pc.png"
 import React from "react";
-import {eventWrapper} from "@testing-library/user-event/dist/utils";
-import {AdminNav} from "../../../../components/Admin/AdminNav/AdminNav";
 
 export const HotDeals = () => {
 
@@ -51,7 +49,6 @@ export const HotDeals = () => {
                     </div>
                 </div>
             </div>
-            <AdminNav/>
         </>
     );
 };

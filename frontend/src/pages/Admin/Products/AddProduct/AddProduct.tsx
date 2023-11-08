@@ -1,5 +1,4 @@
 import "./AddProduct.css";
-import {AdminNav} from "../../../../components/Admin/AdminNav/AdminNav";
 
 
 export const AddProduct = () => {
@@ -68,9 +67,6 @@ export const AddProduct = () => {
                     </button>
                 </form>
 
-                <div className="admin-nav-wrapper">
-                    <AdminNav/>
-                </div>
 
 
             </div>

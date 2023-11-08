@@ -30,7 +30,6 @@ export const NavBar: React.FC<NavBarProps> = ({isMenuOpen, setIsMenuOpen, toggle
                                     <li className="sub-nav-item"><Link className='sub-nav-item' to="/my-account/wish-list/1">Wish list</Link></li>
                                     <li className="sub-nav-item"><Link className='sub-nav-item' to="/my-account/support/1">Support</Link></li>
                                     <li className="sub-nav-item"><Link className='sub-nav-item' to="/logout">Log out</Link></li>
-
                                 </ul>
                             )}
                         </li>

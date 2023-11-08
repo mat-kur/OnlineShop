@@ -1,8 +1,8 @@
 import "./Dashboard.css";
-import {AdminNav} from "../../../components/Admin/AdminNav/AdminNav";
 
 import useravatar from "../../ProductDetails/UsersComments/istockphoto-1337144146-612x612.jpg"
 import {Link} from "react-router-dom";
+import {AdminHeader} from "../../../components/Admin/AdminHeader/AdminHeader";
 
 
 const orders = [
@@ -31,7 +31,8 @@ export const Dashboard = () => {
 
 
     return (
-        <div className="dashboard-wrapper">
+        <div>
+            <AdminHeader/>
             <div className="admin-dashboard-container">
                 <div className="admin-dashboard">
                     <div className="admin-dashboard-pending">
@@ -151,9 +152,6 @@ export const Dashboard = () => {
                         </tbody>
                     </table>
                 </div>
-            </div>
-            <div className="test32">
-                <AdminNav/>
             </div>
         </div>
     );

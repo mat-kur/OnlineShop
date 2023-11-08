@@ -3,9 +3,6 @@ import "./ProductList.css";
 import fifaimg from "../../../Home/ShopItems/i-fifa-23-gra-pc.png"
 import {Pagination} from "./Pagination/Pagination";
 import {SearchBar} from "./SearchBar/SearchBar";
-import {AdminNav} from "../../../../components/Admin/AdminNav/AdminNav";
-import {eventWrapper} from "@testing-library/user-event/dist/utils";
-import {unstable_renderSubtreeIntoContainer} from "react-dom";
 import {Link} from "react-router-dom";
 
 export const ProductList = () => {
@@ -48,9 +45,6 @@ export const ProductList = () => {
                     )}
                     <Pagination/>
                 </div>
-                <div className="admin-nav-wrapper">
-                    <AdminNav/>
-                </div>
             </div>
             <div className="products-container-desktop">
                 <div className="product-desktop-wrapper">
@@ -90,7 +84,6 @@ export const ProductList = () => {
                     <Pagination/>
                 </div>
                 <div className="admin-nav-wrapper">
-                    <AdminNav/>
                 </div>
             </div>
         </>
