@@ -1,19 +1,29 @@
-@keyframes slideInNotiFromLeft {
-    from { transform: translateX(-100%); }
+@keyframes slideInNotiFromRight {
+    from { transform: translateX(100%); }
     to { transform: translateX(0); }
 }
 
-@keyframes slideNotiOutToLeft {
+@keyframes slideNotiOutToRight {
     from { transform: translateX(0); }
-    to { transform: translateX(-100%); }
+    to { transform: translateX(100%); }
 }
 
 .notification-open {
-    animation: slideInNotiFromLeft 0.5s ease-out forwards;
+    animation: slideInNotiFromRight 0.5s ease-out forwards;
 }
 
 .notification-closed{
-    animation: slideNotiOutToLeft 0.5s ease-out forwards;
+    animation: slideNotiOutToRight 0.5s ease-out forwards;
+}
+
+.notifications-wrapper {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    right: 0; /* Start from the right side */
+    bottom: 0;
+    z-index: 9999;
+    background-color: #ffffff;
 }
 
 .notifications-title-container {
@@ -22,15 +32,8 @@
     padding: 10px;
 }
 
-.notifications-wrapper {
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    z-index: 9999;
-    background-color: #ffffff;
-}
+/* ... rest of your CSS ... */
+
 
 .notifications-title {
     font-weight: 300;

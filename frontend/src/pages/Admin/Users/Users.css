@@ -1,0 +1,16 @@
+.admin-single-user {
+    display: flex;
+    justify-content: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    margin: 10px;
+    padding: 10px;
+}
+
+.admin-single-user img {
+    max-height: 50px;
+    margin-left: 10px;
+}
+
+.admin-single-user p {
+    margin-top: 5px;
+}

@@ -55,6 +55,7 @@
 .add-prodduct-container {
     display: flex;
     justify-content: center;
+    margin: 10px;
 }
 
 .add-product-title {

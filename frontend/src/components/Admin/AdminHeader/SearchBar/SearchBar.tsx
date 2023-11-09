@@ -10,7 +10,7 @@ export const SearchBar: React.FC<SearchBarTypes> = ({isSearchOpen, toggleSearch,
         <>
             {isSearchOpen && <div className={`overlay ${isSearchOpen ? 'overlay-show' : ''}`} onClick={toggleSearch}></div>}
             {isSearchOpen &&
-                <div className="admin-searchbar">
+                <div className={`admin-searchbar ${isSearchOpen ? '' : 'search-closing'}`}>
                     <p className="admin-search-title">Search</p>
                     <div className="admin-search-container">
                         <input type="text"/>

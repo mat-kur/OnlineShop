@@ -23,7 +23,7 @@ export const AdminNavigation: React.FC<AdminNavigationTypes> = ({
                     <span>O</span>nline-<span>S</span>hop
                 </h3>
                 <ul className="admin-navi-list">
-                    <li className="admin-navi-item"><Link to="/"><i className="fa-solid fa-chart-line"></i> Dashboard</Link></li>
+                    <li className="admin-navi-item"><Link to="/admin/dashboard"><i className="fa-solid fa-chart-line"></i> Dashboard</Link></li>
                     <li className="admin-navi-item" onClick={toggleSubMenu}>
                         <Link to="#" className={`${isSubMenuOpen ? 'no-border' : ''} admin-nav-submenu`}>
                             <i className="fa-solid fa-boxes-stacked"></i> Products
@@ -32,14 +32,15 @@ export const AdminNavigation: React.FC<AdminNavigationTypes> = ({
                         {isSubMenuOpen && (
                             <ul className="sub-admin-nav-list">
                                 <li className="sub-admin-nav-item"><Link to="/admin/products/add-product">Add Product</Link></li>
-                                <li className="sub-admin-nav-item"><Link to="/admin/products/product-list">Product List</Link></li>
-                                <li className="sub-admin-nav-item"><Link to="/admin/products/hot-offers">Hot Offers</Link></li>
+                                <li className="sub-admin-nav-item"><Link to="/admin/products/products-list">Product List</Link></li>
+                                <li className="sub-admin-nav-item"><Link to="/admin/products/hot-deals">Hot Deals</Link></li>
                                 <li className="sub-admin-nav-item"><Link to="/admin/products/discounts">Discounts</Link></li>
                             </ul>
                         )}
                     </li>
-                    <li className="admin-navi-item"><Link to="/"><i className="admin-nav-cart fa-solid fa-cart-shopping"></i> Orders</Link></li>
+                    <li className="admin-navi-item"><Link to="/admin/orders"><i className="admin-nav-cart fa-solid fa-cart-shopping"></i> Orders</Link></li>
                     <li className="admin-navi-item"><Link to="/"><i className="fa-solid fa-users"></i> Users</Link></li>
+                    <li className="admin-navi-item"><Link to="/"><i className="fa-solid fa-headset"></i> Support</Link></li>
                 </ul>
             </div>
         </>

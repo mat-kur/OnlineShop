@@ -1,10 +1,13 @@
 import "./AddProduct.css";
+import {AdminHeader} from "../../../../components/Admin/AdminHeader/AdminHeader";
 
 
 export const AddProduct = () => {
 
 
     return (
+        <>
+            <AdminHeader/>
             <div className="add-prodduct-container">
                 <form className="add-product-form">
                     <p className="add-product-title">Add new product</p>
@@ -66,9 +69,7 @@ export const AddProduct = () => {
                     <button type="submit" className="submit-button"><i className="fa-solid fa-plus"></i> Add Product
                     </button>
                 </form>
-
-
-
             </div>
+        </>
     );
 };

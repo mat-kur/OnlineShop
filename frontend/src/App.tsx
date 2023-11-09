@@ -20,6 +20,8 @@ import {Dashboard} from "./pages/Admin/Dashboard/Dashboard";
 import {AddProduct} from "./pages/Admin/Products/AddProduct/AddProduct";
 import {ProductList} from "./pages/Admin/Products/ProductList/ProductList";
 import {HotDeals} from "./pages/Admin/Products/HotDeals/HotDeals";
+import {Orders} from "./pages/Admin/Orders/Orders";
+import {Users} from "./pages/Admin/Users/Users";
 
 
 function App() {
@@ -47,6 +49,8 @@ function App() {
             <Route path="/admin/products/add-product" element={<AddProduct/>}/>
             <Route path="/admin/products/products-list" element={<ProductList/>}/>
             <Route path="/admin/products/hot-deals" element={<HotDeals/>}/>
+            <Route path="/admin/orders" element={<Orders/>}/>
+            <Route path="/admin/users" element={<Users/>}/>
         </Routes>
         {!isAdminRoute && <Footer/>}
     </div>

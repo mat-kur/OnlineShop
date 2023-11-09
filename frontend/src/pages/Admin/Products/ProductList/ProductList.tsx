@@ -4,6 +4,7 @@ import fifaimg from "../../../Home/ShopItems/i-fifa-23-gra-pc.png"
 import {Pagination} from "./Pagination/Pagination";
 import {SearchBar} from "./SearchBar/SearchBar";
 import {Link} from "react-router-dom";
+import {AdminHeader} from "../../../../components/Admin/AdminHeader/AdminHeader";
 
 export const ProductList = () => {
     const products = [
@@ -16,6 +17,7 @@ export const ProductList = () => {
 
     return (
         <>
+            <AdminHeader/>
             <div className="product-list-contaainer-mobile">
                 <div className="product-list-wrapper">
                     <SearchBar/>
@@ -40,6 +42,7 @@ export const ProductList = () => {
                             <div className="product-actions">
                                 <button className="product-edit">EDIT</button>
                                 <button className="product-del">DEL</button>
+                                <button className="product-discount"><i className="fa-solid fa-tag"></i></button>
                             </div>
                         </div>
                     )}
