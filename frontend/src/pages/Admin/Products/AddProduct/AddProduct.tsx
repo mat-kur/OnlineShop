@@ -1,13 +1,13 @@
 import "./AddProduct.css";
 import {AdminHeader} from "../../../../components/Admin/AdminHeader/AdminHeader";
-import React, {ChangeEvent, useState} from "react";
+import React, {ChangeEvent, useEffect, useState} from "react";
 import axios from "axios";
-import { FormData } from "../../../../types/formTypes";
+import { ProductFormData } from "../../../../types/formTypes"
 
 
 export const AddProduct = () => {
 
-    const [formData, setFormData] = useState<FormData>({
+    const [formData, setFormData] = useState<ProductFormData>({
         title: '',
         shortDescription: '',
         longDescription: '',
@@ -37,8 +37,6 @@ export const AddProduct = () => {
         if (!fileList) return;
         setFile(fileList[0]);
     };
-
-
 
     const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
         e.preventDefault();
@@ -118,6 +116,9 @@ export const AddProduct = () => {
                             required
                         ></textarea>
                     </div>
+                    {/*<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam, soluta.</p>*/}
+                    {/*<br/>*/}
+                    {/*<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid blanditiis culpa cum cumque cupiditate dignissimos eaque earum fuga fugiat hic magnam maiores molestiae molestias nam necessitatibus nemo perspiciatis, porro praesentium quasi quis quisquam sunt tempora unde velit vero? Animi, hic!</p>*/}
 
                     <div className="form-group">
                         <label htmlFor="longDescription"><i className="fa-solid fa-align-justify"></i> Long Description</label>

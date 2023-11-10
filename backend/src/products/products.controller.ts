@@ -1,10 +1,11 @@
-import { Controller, Post, UseInterceptors, UploadedFile, Body } from '@nestjs/common';
+import {Controller, Post, UseInterceptors, UploadedFile, Body, Get} from '@nestjs/common';
 import { FileInterceptor } from '@nestjs/platform-express';
 import { ProductService } from './services/product.service';
 import { CreateProductDto } from './create-product.dto';
 import { diskStorage } from 'multer';
 import { v4 as uuidv4 } from 'uuid';
 import * as path from 'path';
+import {Product} from "./entities/product.entity";
 
 @Controller('products')
 export class ProductsController {
@@ -30,5 +31,10 @@ export class ProductsController {
             createProductDto.image = file.filename;
         }
         return this.productService.create(createProductDto);
+    }
+
+    @Get()
+    findAll(): Promise<Product[]> {
+        return this.productService.findAll();
     }
 }

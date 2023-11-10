@@ -1,5 +1,5 @@
 
-export interface FormData {
+export interface ProductFormData {
     title: string;
     shortDescription: string;
     longDescription: string;

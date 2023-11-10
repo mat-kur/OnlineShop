@@ -20,4 +20,8 @@ export class ProductService {
             throw new HttpException('Cannot save product', HttpStatus.BAD_REQUEST);
         }
     }
+
+    async findAll(): Promise<Product[]> {
+        return this.productRepository.find();
+    }
 }
