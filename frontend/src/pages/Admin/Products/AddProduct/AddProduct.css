@@ -11,6 +11,30 @@
     margin-bottom: 15px;
 }
 
+.error {
+    border: 2px solid red;
+}
+
+.error-message {
+    color: red;
+    font-size: 0.8rem;
+}
+
+.add-product-succes-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    background-color: #8be135;
+    margin: 10px;
+}
+
+.add-product-succes-wrapper p {
+    font-size: 13px;
+    color: #f4f4f4;
+}
+
+
 .form-group label {
     display: block;
     margin-bottom: 5px;
