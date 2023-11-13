@@ -1,14 +1,10 @@
 import "./ProductsList.css";
 
-import React, {ChangeEvent, useEffect, useState} from "react";
+import React, { useEffect, useState} from "react";
 import axios from "axios";
 import { Product } from "../../types/product.types"
+import { Filters} from "../../types/productListFiltes.types";
 
-
-type Filters = {
-    categories: Set<string>;
-    brands: Set<string>;
-};
 export const ProductsList = () => {
 
     const [productList, setProductList] = useState<Product[]>([]);
@@ -18,20 +14,25 @@ export const ProductsList = () => {
         brands: new Set(),
     });
     const [priceRange, setPriceRange] = useState({
-        min: '',
-        max: '',
+        minPrice: '',
+        maxPrice: '',
     });
 
 
 
     const [searchTerm, setSearchTerm] = useState('');
 
-    const handleSearchChange = (event: any) => {
-        setSearchTerm(event.target.value);
+    const [sortOrder, setSortOrder] = useState('');
+
+// Aktualizacja stanu po zmianie wartości w dropdown
+    const handleSortChange = async (event: React.ChangeEvent<HTMLSelectElement>) => {
+        setSortOrder(event.target.value);
+        await applyFilters();
     };
 
-    const handlePriceChange = (e: ChangeEvent<HTMLInputElement>, type: 'min' | 'max') => {
-        setPriceRange({ ...priceRange, [type]: e.target.value });
+
+    const handleSearchChange = (event: any) => {
+        setSearchTerm(event.target.value);
     };
 
     const handleFilterChange = (
@@ -58,7 +59,9 @@ export const ProductsList = () => {
                     search: searchTerm,
                     categories: Array.from(filters.categories),
                     brands: Array.from(filters.brands),
-                    ...priceRange, // rozprzestrzeniaj obiekt priceRange
+                    minPrice: priceRange.minPrice,
+                    maxPrice: priceRange.maxPrice,
+                    sort: sortOrder, // użyj przekazanej wartości sortowania
                 },
             });
             setProductList(response.data);
@@ -66,6 +69,7 @@ export const ProductsList = () => {
             console.error("Error fetching filtered products:", error);
         }
     };
+
 
 
 
@@ -86,10 +90,10 @@ export const ProductsList = () => {
             <div className="search-result-wrapper">
                 <p className="result-search">Search result of <span>'FIFA 2023'</span></p>
                 <div className="dropdown-container">
-                    <select className="custom-dropdown">
+                    <select value={sortOrder}
+                        onChange={handleSortChange} className="custom-dropdown">
                         <option value="lower-price">Lower price</option>
                         <option value="higher-price">Higher price</option>
-                        <option value="most-popular">Most popular</option>
                     </select>
                 </div>
             </div>
@@ -183,21 +187,21 @@ export const ProductsList = () => {
                         <p className="paragraph-categories">PRICE RANGE</p>
                         <div className="price-range-inputs">
                             <input
-                                type="text"
+                                type="number"
                                 className="min-range"
                                 placeholder="$ MIN"
                                 name="min"
-                                value={priceRange.min}
-                                onChange={(e) => setPriceRange({ ...priceRange, min: e.target.value })}
+                                value={priceRange.minPrice}
+                                onChange={(e) => setPriceRange({ ...priceRange, minPrice: e.target.value })}
                             />
                             <p className="price-range-p">-</p>
                             <input
-                                type="text"
+                                type="number"
                                 className="max-range"
                                 placeholder="$ MAX"
                                 name="max"
-                                value={priceRange.max}
-                                onChange={(e) => setPriceRange({ ...priceRange, max: e.target.value })}
+                                value={priceRange.maxPrice}
+                                onChange={(e) => setPriceRange({ ...priceRange, maxPrice: e.target.value })}
                             />
                         </div>
                         <button onClick={applyFilters} className="btn-filter">FILTER</button>
@@ -205,7 +209,7 @@ export const ProductsList = () => {
                 </div>
                 <div className="products-wrapper-games">
                     {productList && productList.map(prod => (
-                        <div className="single-product">
+                        <div key={prod.id} className="single-product">
                             <div className="single-product-img">
                                 <img src={`http://localhost:5000/uploads/products-images/${prod.image}`} alt=""/>
                             </div>

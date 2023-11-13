@@ -38,13 +38,22 @@ export class ProductsController {
         @Query('categories') categories?: string | string[],
         @Query('brands') brands?: string | string[],
         @Query('search') search?: string,
+        @Query('minPrice') minPrice?: string,
+        @Query('maxPrice') maxPrice?: string,
+        @Query('sort') sort?: string
     ): Promise<Product[]> {
+        const min = minPrice ? Number(minPrice) : null;
+        const max = maxPrice ? Number(maxPrice) : null;
         return this.productService.getFilteredProducts({
             categories: Array.isArray(categories) ? categories : categories?.split(',') || [],
             brands: Array.isArray(brands) ? brands : brands?.split(',') || [],
             search,
+            minPrice: min as number | null,
+            maxPrice: max as number | null,
+            sort
         });
     }
+
 
 
 

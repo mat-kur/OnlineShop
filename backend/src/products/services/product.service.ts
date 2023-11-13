@@ -21,7 +21,14 @@ export class ProductService {
         }
     }
 
-    async getFilteredProducts(filterOptions: { categories?: string[]; brands?: string[]; search?: string }): Promise<Product[]> {
+    async getFilteredProducts(filterOptions: {
+        categories?: string[];
+        brands?: string[];
+        search?: string;
+        minPrice?: number | null;
+        maxPrice?: number | null;
+        sort?: string;
+    }): Promise<Product[]> {
         const queryBuilder = this.productRepository.createQueryBuilder('product');
 
         if (filterOptions.categories && filterOptions.categories.length > 0) {
@@ -37,6 +44,19 @@ export class ProductService {
                 'product.title LIKE :search',
                 { search: `%${filterOptions.search}%` }
             );
+        }
+
+        if (filterOptions.minPrice !== null) {
+            queryBuilder.andWhere('product.price >= :minPrice', { minPrice: filterOptions.minPrice });
+        }
+
+        if (filterOptions.maxPrice !== null) {
+            queryBuilder.andWhere('product.price <= :maxPrice', { maxPrice: filterOptions.maxPrice });
+        }
+
+        if (filterOptions.sort) {
+            const sortOrder = filterOptions.sort === 'lower-price' ? 'ASC' : 'DESC';
+            queryBuilder.orderBy('product.price', sortOrder);
         }
 
         return queryBuilder.getMany();
