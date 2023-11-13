@@ -21,8 +21,8 @@ import { AuthModule } from './auth/auth.module';
       synchronize: true, // automatyczna synchronizacja schematu bazy (używaj ostrożnie)
     }),
     TypeOrmModule.forFeature([Product]),
-    UsersModule,
     AuthModule,
+    UsersModule,
   ],
   controllers: [AppController, ProductsController],
   providers: [AppService, ProductService],

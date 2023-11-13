@@ -23,6 +23,7 @@ export class UsersService {
 
     async validateUser(username: string, pass: string): Promise<any> {
         const user = await this.userRepository.findOne({ where: { username } });
+        console.log(user); // Dodaj logowanie, aby zobaczyć, czy user jest poprawnie zwracany
         if (user && await bcrypt.compare(pass, user.password)) {
             const { password, ...result } = user;
             return result;
@@ -31,10 +32,9 @@ export class UsersService {
     }
 
     async validate(payload: any) {
-        // Tutaj załóżmy, że w payloadzie mamy `username`:
-        const user = await this.usersService.findByUsername(payload.username);
+        const user = await this.userRepository.findOne({ where: { username: payload.username } });
         if (!user) {
-            throw new UnauthorizedException();
+            throw new UnauthorizedException('User not found');
         }
         return user; // W req.user znajdzie się teraz zwrócony obiekt użytkownika bez hasła
     }

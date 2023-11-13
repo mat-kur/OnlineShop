@@ -1,46 +1,24 @@
 import "./ProductsList.css";
 
-import fifalogo from "../Home/ShopItems/i-fifa-23-gra-pc.png"
-import elexlogo from "../Home/ShopItems/elex2.png"
-import cyberlogo from "../Home/ShopItems/Cyberpunk_2077_Gra_PC_-_okladka-01.jpg"
-import React, {useState} from "react";
-
-const MOCK_PRODUCTS = [
-    {
-        id: 1,
-        title: 'FIFA2023',
-        description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Modi, quisquam!',
-        category: "SPORT",
-        platform: "PC",
-        price: "130 zł",
-        priceBefore: "60 zł",
-        img: fifalogo,
-    },
-    {
-        id: 2,
-        title: 'ELEX 2',
-        description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Modi, quisquam!',
-        category: "RPG",
-        platform: "PC",
-        price: "50 zł",
-        priceBefore: "99 zł",
-        img: elexlogo,
-    },
-    {
-        id: 3,
-        title: 'Cyberpunk 2077',
-        description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Modi, quisquam!',
-        category: "RPG",
-        platform: "PC",
-        price: "170 zł",
-        priceBefore: "200 zł",
-        img: cyberlogo,
-    },
-]
+import React, {useEffect, useState} from "react";
+import axios from "axios";
+import { Product } from "../../types/product.types"
 
 export const ProductsList = () => {
 
-    const [productList, setProductList] = useState(MOCK_PRODUCTS)
+    const [productList, setProductList] = useState<Product[]>([]);
+
+    useEffect(() => {
+        const fetchData = async () => {
+            try {
+                const response = await axios.get('http://localhost:5000/products');
+                setProductList(response.data); // Zakładamy, że response.data jest Product[]
+            } catch (error) {
+                console.error("Wystąpił błąd podczas pobierania danych:", error);
+            }
+        };
+        fetchData();
+    }, []);
 
     return (
         <div className="seard-categories-wrapper">
@@ -117,7 +95,7 @@ export const ProductsList = () => {
                     {productList && productList.map(prod => (
                         <div className="single-product">
                             <div className="single-product-img">
-                                <img src={prod.img} alt=""/>
+                                <img src={`http://localhost:5000/uploads/products-images/${prod.image}`} alt=""/>
                             </div>
                             <div className="info-prodcut-wrapper">
                                 <div className="wish-list-btn">
@@ -139,7 +117,7 @@ export const ProductsList = () => {
                                     </div>
                                 </div>
                                 <div className="single-product-description">
-                                    <p className="product-description">{prod.description}</p>
+                                    <p className="product-description">{prod.shortDescription}</p>
                                 </div>
                                 <div className="single-product-categories">
                                     <p className="categories-p">Category: <span>{prod.category}</span></p>
@@ -147,7 +125,7 @@ export const ProductsList = () => {
                                 </div>
                                 <div className="single-product-price">
                                     <p className="product-price">{prod.price}</p>
-                                    <p className="product-price-before">{prod.priceBefore}</p>
+                                    <p className="product-price-before">150</p>
                                 </div>
                                 <button className="single-product-detail">VIEW DETAILS</button>
                             </div>

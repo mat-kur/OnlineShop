@@ -1,12 +1,14 @@
-import React, {ChangeEvent, useState} from "react";
+import React, {ChangeEvent, useEffect, useState} from "react";
 import { Link } from "react-router-dom";
 import axios from "axios";
 
 export const Login = () => {
-    // const history = useHistory();
     const [credentials, setCredentials] = useState({ username: "", password: "" });
 
-    const handleInputChange = (e: ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
+    // Jeśli chcesz przechowywać więcej informacji, user powinien być obiektem
+    const [user, setUser] = useState({ username: "" });
+
+    const handleInputChange = (e: ChangeEvent<HTMLInputElement>) => {
         const { name, value } = e.target;
         setCredentials({ ...credentials, [name]: value });
     };
@@ -14,19 +16,21 @@ export const Login = () => {
     const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
         e.preventDefault();
         try {
-            const response = await axios.post("http://localhost:5000/auth/login", credentials);
-            const { access_token } = response.data;
-
-            // Możesz zapisać token w localStorage lub w stanie globalnym aplikacji
+            const response = await axios.post("http://localhost:5000/users/login", credentials);
+            const { access_token, username } = response.data; // Oczekujemy teraz username z serwera
             localStorage.setItem("token", access_token);
-
-            // Przekieruj do strony głównej lub dashboardu użytkownika
-            // history.push("/dashboard");
+            setUser({
+                username: username, // Używamy username otrzymanego z odpowiedzi serwera
+            });
+            console.log(user)
         } catch (error) {
             console.error("Login failed:");
-            // Tutaj możesz wyświetlić błąd użytkownikowi
         }
     };
+
+    useEffect(() => {
+        console.log(user); // To wykona się po każdej aktualizacji stanu `user`
+    }, [user]);
 
     return (
         <div className="login-992">
