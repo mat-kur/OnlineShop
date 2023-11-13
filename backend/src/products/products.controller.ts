@@ -1,4 +1,4 @@
-import {Controller, Post, UseInterceptors, UploadedFile, Body, Get} from '@nestjs/common';
+import {Controller, Post, UseInterceptors, UploadedFile, Body, Get, Query} from '@nestjs/common';
 import { FileInterceptor } from '@nestjs/platform-express';
 import { ProductService } from './services/product.service';
 import { CreateProductDto } from './create-product.dto';
@@ -34,7 +34,19 @@ export class ProductsController {
     }
 
     @Get()
-    findAll(): Promise<Product[]> {
-        return this.productService.findAll();
+    findAll(
+        @Query('categories') categories?: string | string[],
+        @Query('brands') brands?: string | string[],
+        @Query('search') search?: string,
+    ): Promise<Product[]> {
+        return this.productService.getFilteredProducts({
+            categories: Array.isArray(categories) ? categories : categories?.split(',') || [],
+            brands: Array.isArray(brands) ? brands : brands?.split(',') || [],
+            search,
+        });
     }
+
+
+
+
 }

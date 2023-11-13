@@ -21,6 +21,28 @@ export class ProductService {
         }
     }
 
+    async getFilteredProducts(filterOptions: { categories?: string[]; brands?: string[]; search?: string }): Promise<Product[]> {
+        const queryBuilder = this.productRepository.createQueryBuilder('product');
+
+        if (filterOptions.categories && filterOptions.categories.length > 0) {
+            queryBuilder.andWhere('product.category IN (:...categories)', { categories: filterOptions.categories });
+        }
+
+        if (filterOptions.brands && filterOptions.brands.length > 0) {
+            queryBuilder.andWhere('product.brand IN (:...brands)', { brands: filterOptions.brands });
+        }
+
+        if (filterOptions.search) {
+            queryBuilder.andWhere(
+                'product.title LIKE :search',
+                { search: `%${filterOptions.search}%` }
+            );
+        }
+
+        return queryBuilder.getMany();
+    }
+
+
     async findAll(): Promise<Product[]> {
         return this.productRepository.find();
     }

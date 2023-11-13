@@ -1,12 +1,73 @@
 import "./ProductsList.css";
 
-import React, {useEffect, useState} from "react";
+import React, {ChangeEvent, useEffect, useState} from "react";
 import axios from "axios";
 import { Product } from "../../types/product.types"
 
+
+type Filters = {
+    categories: Set<string>;
+    brands: Set<string>;
+};
 export const ProductsList = () => {
 
     const [productList, setProductList] = useState<Product[]>([]);
+
+    const [filters, setFilters] = useState<Filters>({
+        categories: new Set(),
+        brands: new Set(),
+    });
+    const [priceRange, setPriceRange] = useState({
+        min: '',
+        max: '',
+    });
+
+
+
+    const [searchTerm, setSearchTerm] = useState('');
+
+    const handleSearchChange = (event: any) => {
+        setSearchTerm(event.target.value);
+    };
+
+    const handlePriceChange = (e: ChangeEvent<HTMLInputElement>, type: 'min' | 'max') => {
+        setPriceRange({ ...priceRange, [type]: e.target.value });
+    };
+
+    const handleFilterChange = (
+        filterType: keyof Filters,
+        value: string,
+        isChecked: boolean
+    ) => {
+        setFilters((prevFilters) => {
+            const newFilters = new Set(prevFilters[filterType]);
+            if (isChecked) {
+                newFilters.add(value);
+            } else {
+                newFilters.delete(value);
+            }
+            return { ...prevFilters, [filterType]: newFilters };
+        });
+    };
+
+
+    const applyFilters = async () => {
+        try {
+            const response = await axios.get('http://localhost:5000/products', {
+                params: {
+                    search: searchTerm,
+                    categories: Array.from(filters.categories),
+                    brands: Array.from(filters.brands),
+                    ...priceRange, // rozprzestrzeniaj obiekt priceRange
+                },
+            });
+            setProductList(response.data);
+        } catch (error) {
+            console.error("Error fetching filtered products:", error);
+        }
+    };
+
+
 
     useEffect(() => {
         const fetchData = async () => {
@@ -40,55 +101,106 @@ export const ProductsList = () => {
                         </p>
                     </div>
                     <div className="input-search-container">
-                        <input type="text" className="filters-container-input" placeholder="Search..."/>
+                        <input
+                            type="text"
+                            className="filters-container-input"
+                            placeholder="Search..."
+                            value={searchTerm}
+                            onChange={handleSearchChange}
+                        />
                     </div>
                     <div className="categories-cont filters-categories">
                         <p className="paragraph-categories">Categories</p>
                         <div className="filters-checkboxes">
-                            <input type="checkbox" id="RPG"/>
+                            <input
+                                type="checkbox"
+                                id="RPG"
+                                onChange={(e) => handleFilterChange('categories', 'RPG', e.target.checked)}
+                            />
                             <label htmlFor="RPG" className="checkbox-p">RPG</label>
                         </div>
                         <div className="filters-checkboxes">
-                            <input type="checkbox" id="FPS"/>
+                            <input
+                                type="checkbox"
+                                id="FPS"
+                                onChange={(e) => handleFilterChange('categories', 'FPS', e.target.checked)}
+                            />
                             <label htmlFor="FPS" className="checkbox-p">FPS</label>
                         </div>
                         <div className="filters-checkboxes">
-                            <input type="checkbox" id="LOGIC"/>
+                            <input
+                                type="checkbox"
+                                id="LOGIC"
+                                onChange={(e) => handleFilterChange('categories', 'LOGIC', e.target.checked)}
+                            />
                             <label htmlFor="LOGIC" className="checkbox-p">LOGIC</label>
                         </div>
                         <div className="filters-checkboxes">
-                            <input type="checkbox" id="SPORT"/>
+                            <input
+                                type="checkbox"
+                                id="SPORT"
+                                onChange={(e) => handleFilterChange('categories', 'SPORT', e.target.checked)}
+                            />
                             <label htmlFor="SPORT" className="checkbox-p">SPORT</label>
                         </div>
                         <div className="filters-checkboxes">
-                            <input type="checkbox" id="BATTLE ROYALE"/>
+                            <input
+                                type="checkbox"
+                                id="BATTLE ROYALE"
+                                onChange={(e) => handleFilterChange('categories', 'BATTLE ROYALE', e.target.checked)}
+                            />
                             <label htmlFor="BATTLE ROYALE" className="checkbox-p">BATTLE ROYALE</label>
                         </div>
                         <div className="filters-checkboxes">
-                            <input type="checkbox" id="SIMULATORS"/>
+                            <input
+                                type="checkbox"
+                                id="SIMULATORS"
+                                onChange={(e) => handleFilterChange('categories', 'SIMULATORS', e.target.checked)}
+                            />
                             <label htmlFor="SIMULATORS" className="checkbox-p">SIMULATORS</label>
                         </div>
                     </div>
                     <div className="categories-cont brands-categories filters-categories">
                         <p className="paragraph-categories">BRANDS</p>
                         <div className="filters-checkboxes">
-                            <input type="checkbox" id="EA"/>
+                            <input
+                                type="checkbox"
+                                id="EA"
+                                onChange={(e) => handleFilterChange('brands', 'EA', e.target.checked)}
+                            />
                             <label htmlFor="EA" className="checkbox-p">EA</label>
                         </div>
                         <div className="filters-checkboxes">
                             <input type="checkbox" id="cdProjectRedCheckbox"/>
-                            <label htmlFor="cdProjectRedCheckbox" className="checkbox-p">CD PROJECT
+                            <label
+                                htmlFor="cdProjectRedCheckbox"
+                                className="checkbox-p"
+                            >CD PROJECT
                                 RED</label>
                         </div>
                     </div>
                     <div className="brands-categories filters-categories">
                         <p className="paragraph-categories">PRICE RANGE</p>
                         <div className="price-range-inputs">
-                            <input type="text" className="min-range" placeholder="$ MIN"/>
+                            <input
+                                type="text"
+                                className="min-range"
+                                placeholder="$ MIN"
+                                name="min"
+                                value={priceRange.min}
+                                onChange={(e) => setPriceRange({ ...priceRange, min: e.target.value })}
+                            />
                             <p className="price-range-p">-</p>
-                            <input type="text" className="max-range" placeholder="$ MAX"/>
+                            <input
+                                type="text"
+                                className="max-range"
+                                placeholder="$ MAX"
+                                name="max"
+                                value={priceRange.max}
+                                onChange={(e) => setPriceRange({ ...priceRange, max: e.target.value })}
+                            />
                         </div>
-                        <button className="btn-filter">FILTER</button>
+                        <button onClick={applyFilters} className="btn-filter">FILTER</button>
                     </div>
                 </div>
                 <div className="products-wrapper-games">
@@ -124,7 +236,7 @@ export const ProductsList = () => {
                                     <p className="platform-p">Platform: <span>{prod.platform}</span></p>
                                 </div>
                                 <div className="single-product-price">
-                                    <p className="product-price">{prod.price}</p>
+                                    <p className="product-price">{prod.price} zł</p>
                                     <p className="product-price-before">150</p>
                                 </div>
                                 <button className="single-product-detail">VIEW DETAILS</button>
