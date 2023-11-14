@@ -28,10 +28,6 @@ export const Login = () => {
         }
     };
 
-    useEffect(() => {
-        console.log(user); // To wykona się po każdej aktualizacji stanu `user`
-    }, [user]);
-
     return (
         <div className="login-992">
             <div className="login-wrapper">

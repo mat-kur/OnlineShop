@@ -4,6 +4,7 @@ import React, { useEffect, useState} from "react";
 import axios from "axios";
 import { Product } from "../../types/product.types"
 import { Filters} from "../../types/productListFiltes.types";
+import {Link} from "react-router-dom";
 
 export const ProductsList = () => {
 
@@ -243,7 +244,7 @@ export const ProductsList = () => {
                                     <p className="product-price">{prod.price} zł</p>
                                     <p className="product-price-before">150</p>
                                 </div>
-                                <button className="single-product-detail">VIEW DETAILS</button>
+                                <button className="single-product-detail"><Link to={`/product-details/${prod.id}`}>VIEW DETAILS</Link></button>
                             </div>
                         </div>
                     ))}

@@ -253,6 +253,12 @@ input[type="checkbox"] {
     border-radius: 10px;
 }
 
+.single-product-detail a {
+    color: #ffffff;
+    text-decoration: none;
+
+}
+
 .wish-list-btn {
     position: absolute;
     right: 10px;
